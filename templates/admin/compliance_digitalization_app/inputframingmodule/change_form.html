@@ -1,0 +1,488 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block extrahead %}{{ block.super }}
+<script src="{% url 'admin:jsi18n' %}"></script>
+{{ media }}
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    .form-row
+    {
+        display: inline-block;
+        float: left;
+    }
+
+    div#inputframingmoduleinlineinformation_set-group img {
+    display: none;
+}
+.original {
+    display: none;
+}
+
+
+td.field-assessment_date input {
+    display: inline-block !important;
+    float: left;
+    width: 58% !important;
+}
+
+div#inputframingmoduleinlineinformation_set-group select {
+    width: 80%;
+    padding: 0;
+    height: 24px;
+    margin: auto;
+    display: block;
+}
+
+
+div#inputframingmoduleinlineinformation_set-group input {
+    width: 70% !important;
+    padding: 0;
+    height: 24px;
+    display: block;
+    margin: auto;
+}
+
+
+div#inputframingmoduleinlineinformation_set-group tr {
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+}
+
+div#inputframingmoduleinlineinformation_set-group th {
+    padding: 0 !important;
+}
+
+div#inputframingmoduleinlineinformation_set-group td {
+    padding: 0;
+}
+
+div#inputframingmoduleinlineinformation_set-group thead {
+    width: 100% !important;
+    display: block;
+}
+
+td.field-compliance_owner_function {
+    width: 10%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-compliance_owner_function.required {
+    width: 10%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+th.column-functional_SPOC.required {
+    width: 9%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-functional_SPOC {
+    width: 9%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-email_of_SPOC.required {
+    width: 12%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-email_of_SPOC {
+    width: 12%;
+    display: inline-block;
+    float: left;
+}
+
+.related-widget-wrapper {
+    width: 100%;
+}
+
+div#inputframingmoduleinlineinformation_set-group th {
+    text-align: center;
+    padding-bottom: 17px;
+}
+
+th.column-LM_of_SPOC.required {
+    width: 10%;
+    padding: 0;
+    display: inline-block;
+    float: left;
+}
+
+td.field-LM_of_SPOC {
+    width: 10%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-email_of_SPOC_LM.required {
+    padding: 0;
+    width: 8%;
+    display: inline-block;
+    float: left;
+}
+
+td.field-email_of_SPOC_LM {
+    width: 8%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-assessment_date.required {
+    width: 14%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-assessment_date {
+    width: 14%;
+    display: inline-block;
+    float: left;
+}
+
+
+th.column-assessment_frequency.required {
+    width: 10%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-assessment_frequency {
+    width: 10%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-prior_notification.required {
+    width: 8%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-prior_notification {
+    width: 8%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-reminder_notification.required {
+    width: 6%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-reminder_notification {
+    width: 6%;
+    display: inline-block;
+    float: left;
+}
+
+th.column-escalation_notification.required {
+    width: 7%;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+td.field-escalation_notification {
+    width: 7%;
+    display: inline-block;
+    float: left;
+}
+
+
+
+div#inputframingmoduleinlineinformation_set-group input {
+    width: 64px !important;
+}
+
+div#inputframingmoduleinlineinformation_set-group select {
+    width: 78px !important;
+}
+
+th.column-compliance_owner_function.required {
+    width: 12% !important;
+}
+
+td.field-compliance_owner_function {
+    width: 12%;
+}
+
+th.column-functional_SPOC.required {
+    width: 9%;
+}
+
+td.field-functional_SPOC {
+    width: 9%;
+    padding-right: 17px;
+}
+
+th.column-email_of_SPOC.required {
+    width: 8%;
+}
+
+td.field-email_of_SPOC {
+    width: 8%;
+    padding-right: 14px;
+}
+
+th.column-LM_of_SPOC.required {
+    width: 7%;
+}
+
+td.field-LM_of_SPOC {
+    width: 7%;
+    padding-right: 2px;
+}
+
+th.column-email_of_SPOC_LM.required {
+    width: 10%;
+}
+
+td.field-email_of_SPOC_LM {
+    width: 10.5%;
+}
+
+th.column-assessment_date.required {
+    width: 10%;
+}
+
+td.field-assessment_date {
+    width: 10.7%;
+}
+
+th.column-assessment_frequency.required {
+    width: 10%;
+}
+
+
+td.field-assessment_frequency {
+    width: 10.4%;
+    padding-right: 17px;
+}
+
+th.column-prior_notification.required {
+    width: 10%;
+}
+
+td.field-prior_notification {
+    width: 10%;
+    padding-right: 32px;
+}
+
+th.column-reminder_notification.required {
+    width: 10%;
+}
+
+td.field-reminder_notification {
+    width: 10%;
+    padding-right: 43px;
+}
+
+
+
+</style>
+
+{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-form{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+&rsaquo; {% if has_view_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
+&rsaquo; {% if add %}{% blocktranslate with name=opts.verbose_name %}Add {{ name }}{% endblocktranslate %}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content %}<div id="content-main">
+{% block object-tools %}
+{% if change %}{% if not is_popup %}
+  <ul class="object-tools">
+    {% block object-tools-items %}
+      {% change_form_object_tools %}
+    {% endblock %}
+  </ul>
+{% endif %}{% endif %}
+{% endblock %}
+<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}{% if form_url %}action="{{ form_url }}" {% endif %}method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
+<div>
+{% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1">{% endif %}
+{% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}">{% endif %}
+{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+{% if errors %}
+    <p class="errornote">
+    {% if errors|length == 1 %}{% translate "Please correct the error below." %}{% else %}{% translate "Please correct the errors below." %}{% endif %}
+    </p>
+    {{ adminform.form.non_field_errors }}
+{% endif %}
+
+{% block field_sets %}
+{% for fieldset in adminform %}
+  {% include "admin/includes/fieldset.html" %}
+{% endfor %}
+{% endblock %}
+
+{% block after_field_sets %}{% endblock %}
+
+{% block inline_field_sets %}
+{% for inline_admin_formset in inline_admin_formsets %}
+    {% include inline_admin_formset.opts.template %}
+{% endfor %}
+{% endblock %}
+
+{% block after_related_objects %}{% endblock %}
+
+{% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
+
+{% block admin_change_form_document_ready %}
+    <script id="django-admin-form-add-constants"
+            src="{% static 'admin/js/change_form.js' %}"
+            {% if adminform and add %}
+                data-model-name="{{ opts.model_name }}"
+            {% endif %}
+            async>
+    </script>
+{% endblock %}
+
+{# JavaScript for prepopulated fields #}
+
+
+<script type="text/javascript">
+    
+
+$( "#id_inputframingmoduleinlineinformation_set-0-compliance_owner_function" ).change(function() {
+  
+
+    value = $( "#id_inputframingmoduleinlineinformation_set-0-compliance_owner_function" ).val()
+    $.ajax({
+            url: "/user_sort/",
+            type: "POST",
+            data: {'id': value, csrfmiddlewaretoken:'{{csrf_token}}'} ,
+            success: function (response_data) {
+
+               
+
+                var x = document.getElementById("id_inputframingmoduleinlineinformation_set-0-functional_SPOC");
+
+                    for (i = 0; i < x.length; i++) {
+                        
+
+                        
+                        
+                        if (response_data.list.includes(parseInt(x.options[i].value)) == true){
+
+                            $('#id_inputframingmoduleinlineinformation_set-0-functional_SPOC option[value="'+x.options[i].value+'"]').hide() 
+                        }
+
+                        else{
+                        $('#id_inputframingmoduleinlineinformation_set-0-functional_SPOC option[value="'+x.options[i].value+'"]').show() 
+
+                        }
+                       
+                    }
+
+                
+
+            },
+           
+        });
+
+});
+
+
+var x = document.createElement("INPUT");
+x.setAttribute("id", "clear");
+x.setAttribute("type", "checkbox");
+document.getElementsByClassName('file-upload')[0].appendChild(x);
+
+
+
+  
+  var checkBox = document.getElementById("clear");
+
+
+  
+checkBox.addEventListener('change', (event) => {
+  if (event.target.checked) {
+
+
+    if (confirm('Are sure to delete this file?')) {
+    
+
+
+        var id = {{original.id}}
+        $.ajax({
+            url: "/file_delete/",
+            type: "POST",
+            data: {'id': id, csrfmiddlewaretoken:'{{csrf_token}}'} ,
+            success: function (data) {
+
+               location.reload();
+
+            },
+           
+        });
+
+    } else {
+      
+      checkBox.checked = false;
+     
+      
+    }
+    
+
+           
+
+
+  } 
+  else {
+    
+  }
+
+})
+
+
+</script>
+{% prepopulated_fields_js %}
+
+</div>
+</form></div>
+
+{% if request.user.user_type ==  '1' %}
+<div class="history"> 
+
+<button style=" width: 100px;
+    height: 33px;
+    border: 0;
+    border-radius: 3px;
+    background-color: cadetblue;
+    font-size: 16px;"><a style="color: #fff;" href="/history/{{original.id}}">History</a></button>
+</div>
+
+{% endif %}
+
+
+{% endblock %}

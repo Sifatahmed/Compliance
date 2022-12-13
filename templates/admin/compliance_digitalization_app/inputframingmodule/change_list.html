@@ -1,0 +1,355 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_list %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/changelists.css" %}">
+  {% if cl.formset %}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">
+  {% endif %}
+  {% if cl.formset or action_form %}
+    <script src="{% url 'admin:jsi18n' %}"></script>
+  {% endif %}
+  {{ media.css }}
+  {% if not actions_on_top and not actions_on_bottom %}
+    <style>
+      #changelist table thead th:first-child {width: inherit}
+    </style>
+  {% endif %}
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+{{ media.js }}
+{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-list{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=cl.opts.app_label %}">{{ cl.opts.app_config.verbose_name }}</a>
+&rsaquo; {{ cl.opts.verbose_name_plural|capfirst }}
+</div>
+{% endblock %}
+{% endif %}
+{% block coltype %}{% endblock %}
+{% block content %}
+  <div id="content-main">
+
+    <style type="text/css">
+.filter_block {
+    width: 1200px;
+    height: 270px;
+    margin: auto;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    margin-bottom: 2%;
+}
+
+.filter_block div {
+    width: 46%;
+    display: inline-block;
+    float: left;
+    margin-left: 2%;
+    height: 40px;
+    margin-top: 8px;
+}
+
+.filter_block input {
+    width: 50%;
+    height: 31px;
+    float: right;
+}
+
+.filter_block select {
+    width: 50%;
+    height: 36px;
+    float: right;
+}
+
+div#button button {
+    margin: auto;
+    width: 94px;
+    height: 26px;
+    display: block;
+    border: 1px inset;
+    margin-top: 6px
+}
+
+div#button {
+    width: 100%;
+}
+
+#changelist {
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: auto;
+    display: block;
+}
+
+ul.object-tools {
+    margin-top: 10px;
+}
+
+
+    </style>
+
+
+    {% if request.user.user_type ==  '1' %}
+
+    <div class="filter_block">
+
+      <div class="com_id">
+        <span>Compliance ID: </span>
+        <input type="text" id="com_id" value="{{request.GET.id}}">
+
+      </div>
+
+      <div class="com_stat">
+        <span>Compliance Statement: </span>
+        <input type="text" id="com_stat" value="{{request.GET.title__icontains}}">
+
+      </div>
+
+      <div class="source_of_ob">
+        <span>Source of Obligation: </span>
+        <input type="text" id="source_of_ob" value="{{request.GET.source_of_obligation__icontains}}">
+
+      </div>
+
+      <div class="com_type">
+
+        <span>Compliance Type: </span>
+          <select id="com_type">
+             <option value="0" selected="">Select</option>
+
+            <option value="1">Major</option>
+
+            <option value="2">Non Major</option>
+          </select>
+      </div>
+
+
+
+      <div class="com_cat">
+        
+          <span>Compliance Category: </span>
+          <select id="com_cat">
+             <option value="0" selected="">Select</option>
+            {% for  i in categorys %}
+             <option value="{{i.id}}">{{i.name}}</option>
+            {% endfor %}
+          </select>
+
+      </div>
+
+      
+
+      <div class="com_ow_fun">
+          <span>Compliance owner function: </span>
+          <select id="com_ow_fun">
+             <option value="0" selected="">Select</option>
+            {% for  i in compliance_owners %}
+             <option value="{{i.id}}">{{i.name}}</option>
+            {% endfor %}
+          </select>
+
+      </div>
+
+      <div class="fun_spo">
+          <span>Functional SPOC: </span>
+          <select id="fun_spo">
+            <option value="0" selected="">Select</option>
+            {% for  i in users %}
+             <option value="{{i.id}}">{{i.username}}</option>
+            {% endfor %}
+          </select>
+      </div>
+
+      <div id="button">
+        <button id="click">Submit</button>
+        <button id="clear">Clear</button>
+      </div>
+
+    </div>
+
+    {% endif %}
+    {% block object-tools %}
+          {% if request.user.user_type ==  '1' %}
+        <ul class="object-tools">
+             <a href="/admin/compliance_digitalization_app/inputframingmodule/add/">Add Compliance Framing Module</a>
+        </ul>
+        {% endif %}
+    {% endblock %}
+    {% if cl.formset and cl.formset.errors %}
+        <p class="errornote">
+        {% if cl.formset.total_error_count == 1 %}{% translate "Please correct the error below." %}{% else %}{% translate "Please correct the errors below." %}{% endif %}
+        </p>
+        {{ cl.formset.non_form_errors }}
+    {% endif %}
+    <div class="module{% if cl.has_filters %} filtered{% endif %}" id="changelist">
+      <div class="changelist-form-container">
+        {% block search %}{% search_form cl %}{% endblock %}
+        {% block date_hierarchy %}{% if cl.date_hierarchy %}{% date_hierarchy cl %}{% endif %}{% endblock %}
+
+        
+        <form id="changelist-form" method="post"{% if cl.formset and cl.formset.is_multipart %} enctype="multipart/form-data"{% endif %} novalidate>{% csrf_token %}
+        {% if cl.formset %}
+          <div>{{ cl.formset.management_form }}</div>
+        {% endif %}
+
+        {% block result_list %}
+          {% if action_form and actions_on_top and cl.show_admin_actions %}{% admin_actions %}{% endif %}
+          {% result_list cl %}
+          {% if action_form and actions_on_bottom and cl.show_admin_actions %}{% admin_actions %}{% endif %}
+        {% endblock %}
+        {% block pagination %}{% pagination cl %}{% endblock %}
+        </form>
+
+        
+                  <div class="">
+                      <select id="download">
+                          <option value="">Download</option>
+                          <option value="/input_users_xls">Excel</option>
+                          <option value="/pdf_page">PDF</option>
+                      </select>                  
+                  </div>
+              </form>
+
+              <script>
+                  $("#download").change(function ()
+                  {
+                      var url = $(this).val()
+                      if (url != undefined && url != null && url != "")
+                      {
+                          window.location.href = url;
+                      }
+                  })
+
+              </script>
+      </div>
+     
+    </div>
+  </div>
+      <script>
+
+
+
+
+      if ('{{request.GET.type}}'){
+        
+          $("#com_type").val('{{request.GET.type}}');
+
+
+      }
+
+
+      if ('{{request.GET.compliance_category__id}}'){
+        
+          $("#com_cat").val('{{request.GET.compliance_category__id}}');
+
+
+      }
+
+
+      if ('{{request.GET.compliance_owner}}'){
+        
+          $("#com_ow_fun").val('{{request.GET.compliance_owner}}');
+
+
+      }
+
+
+      if ('{{request.GET.user_id}}'){
+        
+          $("#fun_spo").val('{{request.GET.user_id}}');
+
+
+      }
+
+
+
+    $( "#click" ).click(function() {
+      
+      var com_id = $("#com_id").val();
+
+      var com_stat = $("#com_stat").val();
+
+      var source_of_ob = $("#source_of_ob").val();
+
+      var com_type = $("#com_type").val();
+
+      var com_cat = $("#com_cat").val();
+
+      var com_ow_fun = $("#com_ow_fun").val();
+
+      var fun_spo = $("#fun_spo").val();
+      var simple_url = '?'
+
+      if (com_id){
+
+        simple_url += 'id='+com_id+ '&'
+        
+
+
+      }
+
+      if (com_stat){
+
+       simple_url += 'title__icontains='+com_stat+ '&'
+        
+
+
+      }
+
+      if (source_of_ob){
+
+        simple_url += 'source_of_obligation__icontains='+source_of_ob+ '&'
+      }
+
+
+      if (String(com_type) != '0'){
+
+        simple_url += 'type='+com_type+ '&'
+      }
+
+      if (String(com_cat) != '0'){
+
+        simple_url += 'compliance_category__id='+com_cat+ '&'
+      }
+      
+      if (String(com_ow_fun) != '0'){
+
+        simple_url += 'compliance_owner='+com_ow_fun+ '&'
+      }
+      
+
+      if (String(fun_spo) != '0'){
+
+        simple_url += 'user_id='+fun_spo+ '&'
+      }
+      
+      
+
+
+
+    
+            window.location.href = location.protocol+'//'+location.host+location.pathname+simple_url
+
+
+    });
+
+
+
+    $( "#clear" ).click(function() {
+
+    
+            window.location.href = location.protocol+'//'+location.host+location.pathname
+
+
+    });
+    </script>
+
+{% endblock %}
+

@@ -1,0 +1,370 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block extrahead %}{{ block.super }}
+<script src="{% url 'admin:jsi18n' %}"></script>
+{{ media }}
+{% endblock %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-form{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+&rsaquo; {% if has_view_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
+&rsaquo; {% if add %}{% blocktranslate with name=opts.verbose_name %}Add {{ name }}{% endblocktranslate %}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content %}<div id="content-main">
+
+
+{% block object-tools %}
+{% if change %}{% if not is_popup %}
+  <ul class="object-tools">
+    {% block object-tools-items %}
+      {% change_form_object_tools %}
+    {% endblock %}
+  </ul>
+{% endif %}{% endif %}
+{% endblock %}
+<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}{% if form_url %}action="{{ form_url }}" {% endif %}method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
+<div>
+{% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1">{% endif %}
+{% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}">{% endif %}
+{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+{% if errors %}
+    <p class="errornote">
+    {% if errors|length == 1 %}{% translate "Please correct the error below." %}{% else %}{% translate "Please correct the errors below." %}{% endif %}
+    </p>
+    {{ adminform.form.non_field_errors }}
+{% endif %}
+
+{% block field_sets %}
+{% for fieldset in adminform %}
+  {% include "admin/includes/fieldset.html" %}
+{% endfor %}
+{% endblock %}
+
+{% block after_field_sets %}{% endblock %}
+
+{% block inline_field_sets %}
+{% for inline_admin_formset in inline_admin_formsets %}
+    {% include inline_admin_formset.opts.template %}
+{% endfor %}
+{% endblock %}
+
+{% block after_related_objects %}{% endblock %}
+
+{% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
+
+{% block admin_change_form_document_ready %}
+    <script id="django-admin-form-add-constants"
+            src="{% static 'admin/js/change_form.js' %}"
+            {% if adminform and add %}
+                data-model-name="{{ opts.model_name }}"
+            {% endif %}
+            async>
+    </script>
+{% endblock %}
+
+{# JavaScript for prepopulated fields #}
+<script>
+    
+
+     {% if  original.id%}
+
+            $("input[name='proof_of_compliance']").on('change',function(){
+
+                document.getElementById("id_changed_file").checked = true
+                
+ 
+    })
+
+
+    if ({{ request.user.user_type }} == '1' && $("#id_objects_status").val() == '2')
+    {
+        $("#send").val('Resend')        
+        $("#send").click(function ()
+        {
+            $("#id_objects_status").val("1");
+            $("#inputmodule_form").submit();
+        })
+    }
+    else
+    { 
+        {%if original.input_framing_module.proof_of_compliance %}
+        $("#send").click(function ()
+        {
+
+
+
+            if (document.getElementById("id_changed_file").checked)
+            {
+                
+                
+            $("#id_receive_date").val(new Date().toISOString().slice(0, 10));
+            $("#id_objects_status").val("2");
+            $("#inputmodule_form").submit();
+            
+            }
+          else{
+            alert('Please add proof of compliance attachment')
+          }
+        })
+        {% else %}
+        $("#send").click(function ()
+        {
+          
+            $("#id_receive_date").val(new Date().toISOString().slice(0, 10));
+            $("#id_objects_status").val("2");
+            $("#inputmodule_form").submit();
+          
+        })
+        {% endif %}
+    }
+    {% endif %}
+
+
+
+
+
+    var in_req = "{{ original.input_framing_module.Input_Requirement }}"
+    if (in_req == '1')
+    {
+        $(".form-row.field-date").hide();
+        $(".form-row.field-number").hide();
+        $(".form-row.field-percentage_rate").hide();
+
+
+    }
+    else if (in_req == '2')
+    {        
+        $(".form-row.field-percentage_rate").css({ "display": "inline-block" });
+
+        $(".form-row.field-date").hide();
+        $(".form-row.field-number").hide();
+    }
+    else if (in_req == '3')
+    {
+        
+        $(".form-row.field-percentage_rate").hide();
+
+        $(".form-row.field-date").hide();
+        $(".form-row.field-number").css({ "display": "inline-block !important" });
+    }
+
+    else if (in_req == '4')
+    {     
+        $(".form-row.field-percentage_rate").hide();
+        $("#id_current_status option[value='3']").hide();
+        $("#id_current_status option[value='4']").hide()
+        $(".form-row.field-date").css({ "display":"inline-block"});
+        $(".form-row.field-number").hide();
+    }
+    else
+    {
+        $(".form-row.field-current_status").hide();
+        $(".form-row.field-percentage_rate").hide();
+        $(".form-row.field-date").hide();
+        $(".form-row.field-number").hide();
+    }
+
+{%if original.input_framing_module.proof_of_compliance %}
+
+    $("#inputmodule_form").submit(function (event)
+    {
+ 
+      if ($("select#id_current_status").val() == '2'){
+           
+            if ($("#id_mitigation_plan_Statement").val() == ''){
+                event.preventDefault();
+                $("#id_mitigation_plan_Statement").css({ "border": "1px solid #ff0000 "});
+            }
+            if ($("#id_target_date_of_closure").val() == ''){
+                event.preventDefault();
+                $("#id_target_date_of_closure").css({ "border": "1px solid #ff0000 "});
+            }
+            if ($("#id_mitigation_plan_validated_by").val() == ''){
+                event.preventDefault();
+                $("#id_mitigation_plan_validated_by").css({ "border": "1px solid #ff0000 "});
+            }
+             if ($("#id_root_cause").val() == ''){
+                event.preventDefault();
+                $("#id_root_cause").css({ "border": "1px solid #ff0000 "});
+            }
+
+        }
+});
+
+{% endif %}
+
+
+        $("select#id_current_status").change(function ()
+    {
+        if ($("select#id_current_status").val() == '2'){
+            $(".form-row.field-mitigation_plan_Statement").css({ "display": "inline-block" });
+            $(".form-row.field-target_date_of_closure").css({ "display": "inline-block" });
+            $(".form-row.field-mitigation_plan_validated_by").css({ "display": "inline-block" });
+            $(".form-row.field-root_cause").css({ "display": "inline-block" });
+
+      
+        }
+        else {
+            $(".form-row.field-mitigation_plan_Statement").css({ "display": "none" });
+            $(".form-row.field-target_date_of_closure").css({ "display": "none" });
+            $(".form-row.field-mitigation_plan_validated_by").css({ "display": "none" });
+            $(".form-row.field-root_cause").css({"display": "none"});
+            $('#id_mitigation_plan_Statement').attr('required', false)
+            $('#id_target_date_of_closure').attr('required', false)
+            $('#id_mitigation_plan_validated_by').attr('required', false)
+        }
+       
+    });
+$("#inputmodule_form").submit(function (event)
+    {  
+       
+        if ($("select#id_current_status").val() == '2'){
+            if ($("#id_mitigation_plan_Statement").val() == ''){
+                event.preventDefault();
+                $("#id_mitigation_plan_Statement").css({ "border": "1px solid #ff0000 "});
+            }
+            if ($("#id_target_date_of_closure").val() == ''){
+                event.preventDefault();
+                $("#id_target_date_of_closure").css({ "border": "1px solid #ff0000 "});
+            }
+            if ($("#id_mitigation_plan_validated_by").val() == ''){
+                event.preventDefault();
+                $("#id_mitigation_plan_validated_by").css({ "border": "1px solid #ff0000 "});
+            }
+
+             if ($("#id_root_cause").val() == ''){
+                event.preventDefault();
+                $("#id_root_cause").css({ "border": "1px solid #ff0000 "});
+            }
+
+        }
+
+        if (in_req == '2' || in_req == '3' || in_req == '4'){
+
+            if (in_req == '2' && ($("#id_percentage_rate").val()) == ''){
+                event.preventDefault();
+                $("#id_percentage_rate").css({ "border": "1px solid #ff0000 "});
+
+            }
+
+            else if (in_req == '3' && ($("#id_number").val()) == ''){
+
+                event.preventDefault();
+                $("#id_number").css({ "border": "1px solid #ff0000 "});
+            }
+
+            else if (in_req == '4' && ($("#id_date").val()) == ''){
+
+                event.preventDefault();
+                $("#id_date").css({ "border": "1px solid #ff0000 "});
+            }
+
+
+
+        }
+});
+        if ($("select#id_current_status").val() == '2'){
+            $(".form-row.field-mitigation_plan_Statement").css({ "display": "inline-block" });
+            $(".form-row.field-target_date_of_closure").css({ "display": "inline-block" });
+            $(".form-row.field-mitigation_plan_validated_by").css({ "display": "inline-block" });
+            $(".form-row.field-root_cause").css({ "display": "inline-block" });
+
+      
+        }
+        else {
+            $(".form-row.field-mitigation_plan_Statement").css({ "display": "none" });
+            $(".form-row.field-target_date_of_closure").css({ "display": "none" });
+            $(".form-row.field-mitigation_plan_validated_by").css({ "display": "none" });
+            $(".form-row.field-root_cause").css({ "display": "none" });
+            $('#id_mitigation_plan_Statement').attr('required', false)
+            $('#id_target_date_of_closure').attr('required', false)
+            $('#id_mitigation_plan_validated_by').attr('required', false)
+
+        }
+
+
+        $("#send").click(function ()
+        {
+        if (in_req == '2' || in_req == '3' || in_req == '4'){
+
+            if (in_req == '2' && ($("#id_percentage_rate").val()) == ''){
+                event.preventDefault();
+                $("#id_percentage_rate").css({ "border": "1px solid #ff0000 "});
+
+            }
+
+            else if (in_req == '3' && ($("#id_number").val()) == ''){
+
+                event.preventDefault();
+                $("#id_number").css({ "border": "1px solid #ff0000 "});
+            }
+
+            else if (in_req == '4' && ($("#id_date").val()) == ''){
+
+                event.preventDefault();
+                $("#id_date").css({ "border": "1px solid #ff0000 "});
+            }
+
+
+
+        }
+        })
+
+</script>
+
+
+
+{% prepopulated_fields_js %}
+
+</div>
+<style type="text/css">
+    
+.form-row.field-receive_date {
+    display: none !important;
+}
+
+.form-row.field-changed_file {
+    display: none !important;
+}
+
+.form-row.field-target_date_of_closure {
+    width: 40% !important;
+    margin-left: 10%;
+}
+
+.form-row.field-mitigation_plan_Statement {
+    width: 40% !important;
+}
+
+.form-row.field-mitigation_plan_validated_by {
+    /*display: block !important;*/
+    width: 75% !important;
+    margin-top: 15px;
+}
+
+.form-row.field-root_cause {
+    width: 44% !important;
+}
+
+.form-row.field-manager_comment, .field-root_cause {
+    width: 42% !important;
+}
+
+</style>
+</form></div>
+
+
+{% endblock %}

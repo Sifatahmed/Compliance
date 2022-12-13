@@ -1,0 +1,723 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block extrahead %}{{ block.super }}
+<script src="{% url 'admin:jsi18n' %}"></script>
+{{ media }}
+{% endblock %}
+
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">{% endblock %}
+
+{% block coltype %}colM{% endblock %}
+
+{% block bodyclass %}{{ block.super }} app-{{ opts.app_label }} model-{{ opts.model_name }} change-form{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:app_list' app_label=opts.app_label %}">{{ opts.app_config.verbose_name }}</a>
+&rsaquo; {% if has_view_permission %}<a href="{% url opts|admin_urlname:'changelist' %}">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %}
+&rsaquo; {% if add %}{% blocktranslate with name=opts.verbose_name %}Add {{ name }}{% endblocktranslate %}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content %}<div id="content-main">
+{% block object-tools %}
+{% if change %}{% if not is_popup %}
+  <ul class="object-tools">
+    {% block object-tools-items %}
+      {% change_form_object_tools %}
+    {% endblock %}
+  </ul>
+{% endif %}{% endif %}
+{% endblock %}
+<form {% if has_file_field %}enctype="multipart/form-data" {% endif %}{% if form_url %}action="{{ form_url }}" {% endif %}method="post" id="{{ opts.model_name }}_form" novalidate>{% csrf_token %}{% block form_top %}{% endblock %}
+<div>
+{% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1">{% endif %}
+{% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}">{% endif %}
+{% if save_on_top %}{% block submit_buttons_top %}{% submit_row %}{% endblock %}{% endif %}
+{% if errors %}
+    <p class="errornote">
+    {% if errors|length == 1 %}{% translate "Please correct the error below." %}{% else %}{% translate "Please correct the errors below." %}{% endif %}
+    </p>
+    {{ adminform.form.non_field_errors }}
+{% endif %}
+
+{% block field_sets %}
+{% for fieldset in adminform %}
+  {% include "admin/includes/fieldset.html" %}
+{% endfor %}
+{% endblock %}
+
+{% block after_field_sets %}{% endblock %}
+
+{% block inline_field_sets %}
+{% for inline_admin_formset in inline_admin_formsets %}
+    {% include inline_admin_formset.opts.template %}
+{% endfor %}
+{% endblock %}
+
+{% block after_related_objects %}{% endblock %}
+
+{% block submit_buttons_bottom %}{% submit_row %}{% endblock %}
+
+{% block admin_change_form_document_ready %}
+    <script id="django-admin-form-add-constants"
+            src="{% static 'admin/js/change_form.js' %}"
+            {% if adminform and add %}
+                data-model-name="{{ opts.model_name }}"
+            {% endif %}
+            async>
+    </script>
+{% endblock %}
+
+{# JavaScript for prepopulated fields #}
+
+<script type="text/javascript">
+    
+
+    $( "#id_newdirectivecirculationinlineinformation_set-0-directive_owner_function" ).change(function() {
+      
+    
+        value = $( "#id_newdirectivecirculationinlineinformation_set-0-directive_owner_function" ).val()
+        $.ajax({
+                url: "/user_sort/",
+                type: "POST",
+                data: {'id': value, csrfmiddlewaretoken:'{{csrf_token}}'} ,
+                success: function (response_data) {
+    
+                   
+    
+                    var x = document.getElementById("id_newdirectivecirculationinlineinformation_set-0-functional_SPOC");
+    
+                        for (i = 0; i < x.length; i++) {
+                            
+    
+                            
+                            
+                            if (response_data.list.includes(parseInt(x.options[i].value)) == true){
+    
+                                $('#id_newdirectivecirculationinlineinformation_set-0-functional_SPOC option[value="'+x.options[i].value+'"]').hide() 
+                            }
+    
+                            else{
+                            $('#id_newdirectivecirculationinlineinformation_set-0-functional_SPOC option[value="'+x.options[i].value+'"]').show() 
+    
+                            }
+                           
+                        }
+    
+                    
+    
+                },
+               
+            });
+    
+    });
+    
+    
+  
+    
+    </script>
+
+
+<style>
+
+    div#newdirinline_set-group th {
+    display: inline-block;
+    float: left;
+    }
+    th.submit {
+    display: inline-block;
+    float: left;
+    width: 10%;
+    }
+
+   
+
+    .form-row
+        {
+            display: inline-block;
+            float: left;
+            
+        }
+
+
+        div#newdirectivecirculationinlineinformation_set-group img {
+        display: none;
+    }
+    .original {
+        display: none;
+       
+    }
+    div#newdirinline_set-group th{
+        text-align: center;
+        padding-bottom: 12px;
+       
+        
+    }
+    
+    th.column-upload_file{
+        
+        display: inline-block;
+        float: left;
+        width: 9% ;
+    }
+    td.field-upload_file{
+        display: inline-block;
+        float: left;
+        width: 18%;
+
+
+    }
+
+
+    th.column-elements_to_be_complied{
+       
+        display: inline-block;
+        float: left;
+        width: 21%;
+ }
+   td.field-elements_to_be_complied {
+    display: inline-block;
+    float: left;
+    width: 18%;
+}
+
+    th.column-deadline{
+        display: inline-block;
+        float: left;
+        width: 10%;
+    
+        
+    }
+    td.field-deadline{
+
+        display: inline-block;
+        float: left;
+        width: 7%;
+    
+    }
+    td.field-current_status{
+        display: inline-block;
+        float: left;
+        width: 8%;
+    }
+ 
+
+    th.column-line_item{
+        display: inline-block;
+        float: left;
+        width: 10%;
+    }
+    th.column-implementation_date {
+        width: 13%;
+        display: inline-block;
+        float: left;
+    }
+    td.field-implementation_date{
+        display: inline-block;
+        float: left;
+        width: 11%;
+    }
+
+    th.column-proof_of_compliance {
+        width: 12%;
+        display: inline-block;
+        float: left;
+    }
+
+    td.field-proof_of_compliance{
+        display: inline-block;
+        float: left;
+        width: 14%;
+    }
+
+
+
+    th.column-current_status.required{
+        padding: 2px 10px;
+        display: inline-block;
+        float: left;
+        width: 7%;
+    }
+
+
+    td.field-line_item{
+        display: inline-block;
+        float: left;
+        width: 8%;
+    }
+    input.submit_btn{
+        margin-left: 81%;
+
+    }
+
+    td.delete {
+    width: 31%;
+}
+
+td.field-elements_to_be_complied input {
+    width: 60%;
+    margin-left: -17%;
+}
+
+td.field-line_item input {
+    margin-left: -25%;
+}
+
+
+ 
+    div#newdirinline_set-group td{
+        padding: 0px;
+    
+        
+    }
+    div#newdirinline_set-group tr {
+        padding: 0;
+        width: 100%;
+        display: block;
+    }
+
+    div#newdirinline_set-group select {
+        width: 60%;
+        padding: 0;
+        height: 24px;
+        margin: auto;
+        display: block;
+        
+}
+
+
+
+
+
+
+
+
+
+    td.field-assessment_date input {
+        
+        display: inline-block !important;
+        float: left;
+        width: 58% !important;
+    }
+
+    div#newdirectivecirculationinlineinformation_set-group select {
+        width: 80%;
+        padding: 0;
+        height: 24px;
+        margin: auto;
+        display: block;
+        
+}
+    
+
+
+    div#newdirectivecirculationinlineinformation_set-group input {
+        width: 70% !important;
+        padding: 0;
+        height: 24px;
+        display: block;
+        margin: auto;
+    }
+
+
+    div#newdirectivecirculationinlineinformation_set-group tr {
+        padding: 0;
+        width: 103%;
+        display: block;
+    }
+
+
+
+    div#newdirectivecirculationinlineinformation_set-group th {
+        padding: 2px;
+        width: 8%;
+        height: 2px;
+}
+    }
+
+    div#newdirectivecirculationinlineinformation_set-group td {
+        padding: 0;
+    }
+
+    div#newdirectivecirculationinlineinformation_set-group thead {
+        width: 100% !important;
+        display: block;
+    }
+
+
+
+
+    td.field-directive_owner_function {
+        
+        display: inline-block;
+        
+        float: left;
+        width: 10% !important;
+    }
+
+    th.column-directive_owner_function.required {
+        width: 12% !important;
+        display: inline-block;
+        float: left;
+        
+       
+
+    }
+
+    th.column-functional_SPOC.required {
+        width: 8% !important;
+        display: inline-block;
+        float: left;
+
+    }
+
+    td.field-functional_SPOC {
+        display: inline-block;
+        float: left;
+        width: 8% !important;
+
+    }
+
+    th.column-email_of_SPOC.required {
+       
+        display: inline-block;
+        float: left;
+        width: 8% !important;
+    }
+
+    td.field-email_of_SPOC {
+        
+        display: inline-block;
+        float: left;
+        width: 10% !important;
+     
+    }
+
+    .related-widget-wrapper {
+        width: 100%;
+    }
+
+    div#newdirectivecirculationinlineinformation_set-group th {
+        text-align: center;
+        padding-bottom: 3%;
+        float: left;
+    }
+
+    th.column-LM_of_SPOC.required {
+        width: 10%;
+        padding: 0;
+        display: inline-block;
+        float: left;
+    }
+
+    td.field-LM_of_SPOC {
+       
+        display: inline-block;
+        float: left;
+        width: 5% !important;
+
+    }
+
+    th.column-email_of_SPOC_LM.required {
+        padding: 0;
+        width: 8%;
+        display: inline-block;
+        float: left;
+    }
+
+    td.field-email_of_SPOC_LM {
+        
+        display: inline-block;
+        float: left;
+        width: 11% !important;
+    }
+
+    th.column-assessment_date.required {
+        width: 14%;
+        display: inline-block;
+        float: left;
+        padding: 0;
+    }
+
+    td.field-assessment_date {
+        
+        display: inline-block;
+        float: left;
+        width: 8% !important;
+
+ 
+    }
+
+
+    th.column-prior_notification.required {
+        width: 8%;
+        display: inline-block;
+        float: left;
+        padding: 0;
+    }
+
+    td.field-prior_notification {
+        
+        display: inline-block;
+        float: left;
+        width: 9% !important;
+   
+    }
+
+    th.column-reminder_notification.required {
+        width: 6%;
+        display: inline-block;
+        float: left;
+        padding: 0;
+    }
+
+    td.field-reminder_notification {
+        
+        display: inline-block;
+        float: left;
+        width: 6% !important;
+    }
+
+    th.column-escalation_notification.required {
+        width: 7%;
+        display: inline-block;
+        float: left;
+        padding: 0;
+    }
+
+    td.field-escalation_notification {
+        
+        display: inline-block;
+        float: left;
+        width: 10% !important;
+    }
+ 
+
+
+    div#newdirectivecirculationinlineinformation_set-group input {
+        width: 64px;
+    }
+
+    div#newdirectivecirculationinlineinformation_set-group select {
+        width: 78px !important;
+    }
+
+    th.column-directive_owner_function.required {
+        width: 12% !important;
+        float: left;
+    }
+
+    td.field-directive_owner_function {
+        width: 12%;
+        float: left;
+    }
+
+    th.column-functional_SPOC.required {
+        width: 9%;
+    }
+
+    td.field-functional_SPOC {
+        width: 9%;
+        padding-right: 17px;
+    }
+
+    th.column-email_of_SPOC.required {
+        width: 8%;
+    }
+
+
+
+    th.column-LM_of_SPOC.required {
+        width: 7%;
+    }
+
+    td.field-LM_of_SPOC {
+        width: 7%;
+        padding-right: 2px;
+    }
+
+    th.column-email_of_SPOC_LM.required {
+        width: 10%;
+    }
+
+    td.field-email_of_SPOC_LM {
+        width: 10.5%;
+    }
+
+    th.column-assessment_date.required {
+        width: 10%;
+    }
+
+    td.field-assessment_date {
+        width: 10.7%;
+    }
+
+
+
+
+    th.column-prior_notification.required {
+        width: 10%;
+    }
+
+    td.field-prior_notification {
+        width: 10%;
+        padding-right: 32px;
+    }
+
+    th.column-reminder_notification.required {
+        width: 10%;
+    }
+
+    td.field-reminder_notification {
+        width: 10%;
+        padding-right: 43px;
+    }
+
+
+
+
+</style>
+
+
+{% prepopulated_fields_js %}
+
+  
+  <script type="text/javascript">
+
+  function reply_click(clicked_id)
+
+  {
+        
+
+        var btn = document.createElement("DIV");
+        var btn1 = document.createElement("DIV");
+
+        if ( document.getElementById(clicked_id).children.length == 1){
+
+        id_replace = clicked_id.replace("id_", "");
+        id_replace = id_replace.replace('-line_item', '')
+        document.getElementById(id_replace).style.position = "relative";
+
+
+        document.getElementById(clicked_id).appendChild(btn1)
+        document.getElementById(id_replace).appendChild(btn)
+        
+        var att = document.createAttribute("class");
+        class_name = "hidden_div_" + clicked_id
+        att.value = class_name
+        btn.setAttributeNode(att)
+
+          $(btn).css({
+        "position":"absolute",
+        "top":"36%",
+        "width":"109px",
+        "height":"71px",
+        "left":"5px",
+
+    })
+
+            var container = document.querySelector("#newdirinline_set-group");
+            var x = container.querySelectorAll(".original > p");
+            var select = document.createElement("SELECT");
+            select.setAttribute("id", clicked_id)
+            select.setAttribute("onchange", "getval(this);")
+            
+              for (i = 0; i < x.length; i++) {
+                
+
+                if (i == 0){
+                    var select_option = document.createElement("option");
+                    select_option.setAttribute("value", 0);
+                    select_option.setAttribute("disabled", true);
+                    select_option.setAttribute("selected", true);
+                    select_option.innerHTML='select line item'
+                    select.appendChild(select_option);
+
+
+
+                }
+
+                var option = document.createElement("option");
+
+                option.setAttribute("value", x[i].textContent);
+              var text = document.createTextNode(x[i].textContent);
+              option.appendChild(text);
+              select.appendChild(option);
+              }
+
+
+              btn.appendChild(select)
+        }
+
+        else{
+
+        }
+
+
+
+  }
+
+
+function getval(value)
+{
+
+    var list_of_id = $("input#"+value.id).val().split(',')
+    var n = list_of_id.includes(String(parseInt(value.value)))
+
+    if (list_of_id.length < 1){
+        
+        list_of_id.push(parseInt(value.value))
+        $("input#"+value.id).val(list_of_id);
+
+    }
+    else if (n){
+        
+        
+        list_of_id.splice([list_of_id.indexOf(parseInt(value.value))], 1)
+        $("input#"+value.id).val(list_of_id);
+    }
+    else{
+
+        list_of_id.push(parseInt(value.value))
+        $("input#"+value.id).val(list_of_id);
+        
+        
+    }
+
+    
+
+
+     
+
+    
+     
+}
+
+
+
+
+
+
+// $('td.field-current_status select').prop('disabled', true);
+
+
+
+</script>
+
+
+
+</div>
+</form></div>
+{% endblock %}
+

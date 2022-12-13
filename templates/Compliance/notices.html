@@ -1,0 +1,25 @@
+﻿{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+
+{% block content %}
+
+<p>Notices</p>
+
+<div id="all_news">
+    {{ news|safe }}
+</div>
+
+<style>
+    ul.pager li {
+        list-style: none !important;
+    }
+
+    .item-list li {
+        list-style: inherit !important;
+    }
+
+</style>
+
+
+{% endblock %}

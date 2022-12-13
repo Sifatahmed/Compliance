@@ -1,0 +1,127 @@
+
+
+
+
+
+<style type="text/css">
+
+
+
+
+
+@page {
+size: landscape;
+margin: 1cm auto;
+}
+
+.card-header{
+text-align: left;
+}
+table, td, th {
+border: .5px solid #dddddd;
+
+
+
+}
+
+
+
+td {
+text-align: center;
+height: 50px;
+display: inline-block;
+float: left;
+width: 100%;
+
+
+
+
+
+}
+th {
+
+height: 90px;
+display: inline-block;
+float: left;
+font-size: 8px;
+color: green;
+padding: 2px !important;
+width: 100%;
+}
+
+.email{
+
+line-break: anywhere;
+display: inline-block;
+float: left;
+text-align: left;
+}
+
+
+
+</style>
+
+<table>
+
+
+
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Benchmark</th>
+<th>Source of Obligation</th>
+<th>Clause no</th>
+<th>Yes not input by assesse</th>
+<th>Number/% Value/ Date input by assesse</th>
+<th>Type</th>
+<th>Compliance Category</th>
+<th>Input Requirement</th>
+<th>Question Note to SPOC</th>
+<th>Compliance Performance</th>
+<th>COMPLIANCE OWNER FUNCTION</th>
+<th>FUNCTIONAL SPOC</th>
+<th>EMAIL OF SPOC</th>
+<th>LM OF SPOC</th>
+<th>EMAIL OF SPOC LM</th>
+<th>ASSESSMENT <br> DATE</th>
+<th>ASSESSMENT <br> FREQUENCY</th>
+<th>PRIOR <br> NOTIFICA<br>TION</th>
+<th>REMINDER <br> NOTIFICA<br>TION</th>
+<th>ESCALATION <br> NOTIFICA<br>TION</th>
+</tr>
+</thead>
+
+{% for imput,i in All_modules %}
+
+<tr>
+{% load add_space %}
+<td class="id">{{imput.InputFramingModule_id.id}}</td>
+<td>{{imput.InputFramingModule_id.title}}</td>
+<td>{{imput.InputFramingModule_id.benchmark}}</td>
+<td>{{imput.InputFramingModule_id.source_of_obligation}}</td>
+<td>{{imput.InputFramingModule_id.clause_no}}</td>
+<td>{{i.get_current_status_display}}</td>
+<td>{{i.number}}</td>
+<td>{{imput.InputFramingModule_id.get_type_display}}</td>
+<td>{{imput.InputFramingModule_id.compliance_category}}</td>
+<td>{{imput.InputFramingModule_id.get_Input_Requirement_display}}</td>
+<td>{{imput.InputFramingModule_id.question_note_to_SPOC}}</td>
+<td>{{imput.InputFramingModule_id.compliance_performance}}</td>
+<td>{{imput.compliance_owner_function}}</td>
+<td>{{imput.functional_SPOC.username|replace_space}}<br></td>
+<td>{{imput.email_of_SPOC|replace_space}}</td>
+<td>{{imput.LM_of_SPOC}}</td>
+<td>{{imput.email_of_SPOC_LM|replace_space}}</td>
+<td>{{imput.assessment_date}}</td>
+<td>{{imput.get_assessment_frequency_display}}</td>
+<td>{{imput.get_prior_notification_display}}</td>
+<td>{{imput.get_reminder_notification_display}}</td>
+<td>{{imput.get_escalation_notification_display}}</td>
+
+
+</tr>
+
+{% endfor %}
+</table>

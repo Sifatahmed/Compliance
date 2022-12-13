@@ -1,0 +1,256 @@
+{% load i18n static %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+
+<title>Compliance digitalization</title>
+<link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}">
+{% if not is_popup and is_nav_sidebar_enabled %}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/nav_sidebar.css" %}">
+  <script src="{% static 'admin/js/nav_sidebar.js' %}" defer></script>
+{% endif %}
+{% block extrastyle %}{% endblock %}
+{% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}">{% endif %}
+{% block extrahead %}{% endblock %}
+{% block responsive %}
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive.css" %}">
+    {% if LANGUAGE_BIDI %}<link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}">{% endif %}
+{% endblock %}
+{% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
+<script src="/static/compliance_digitalization_app/assets/js/jquery.min.js"></script>
+<script src="/static/compliance_digitalization_app/assets/js/Chart.min.js"></script>
+<script src="/static/compliance_digitalization_app/assets/js/chart.js"></script>
+<script src="/static/compliance_digitalization_app/assets/js/canvasjs.min.js"></script>
+<script src="/static/compliance_digitalization_app/assets/js/plotly-1.2.0.min.js"></script>
+
+        <!-- Favicon icon -->
+
+    <link rel="icon" href="/static/assets/images/favicon.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="/static/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="/static/assets/css/style.css">
+
+</head>
+{% load i18n %}
+
+<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
+  data-admin-utc-offset="{% now "Z" %}">
+
+<!-- Container -->
+<div id="container">
+
+    {% if not is_popup %}
+    <!-- Header -->
+<!--    <div id="header">-->
+<!--        <div id="branding">-->
+<!--        {% block branding %}{% endblock %}-->
+<!--        </div>-->
+<!--        {% block usertools %}-->
+<!--        {% if has_permission %}-->
+<!--        <div id="user-tools">-->
+<!--            {% block welcome-msg %}-->
+<!--                {% translate 'Welcome,' %}-->
+<!--                <strong>{% firstof user.get_short_name user.get_username %}</strong>.-->
+<!--            {% endblock %}-->
+<!--            {% block userlinks %}-->
+<!--                {% if site_url %}-->
+<!--                    <a href="{{ site_url }}">{% translate 'View site' %}</a> /-->
+<!--                {% endif %}-->
+<!--                {% if user.is_active and user.is_staff %}-->
+<!--                    {% url 'django-admindocs-docroot' as docsroot %}-->
+<!--                    {% if docsroot %}-->
+<!--                        <a href="{{ docsroot }}">{% translate 'Documentation' %}</a> /-->
+<!--                    {% endif %}-->
+<!--                {% endif %}-->
+<!--                {% if user.has_usable_password %}-->
+<!--                <a href="{% url 'admin:password_change' %}">{% translate 'Change password' %}</a> /-->
+<!--                {% endif %}-->
+<!--                <a href="{% url 'admin:logout' %}">{% translate 'Log out' %}</a>-->
+<!--            {% endblock %}-->
+<!--        </div>-->
+<!--        {% endif %}-->
+<!--        {% endblock %}-->
+<!--        {% block nav-global %}{% endblock %}-->
+<!--    </div>-->
+    <!-- END Header -->
+    {% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% translate 'Home' %}</a>
+    {% if title %} &rsaquo; {{ title }}{% endif %}
+    </div>
+    {% endblock %}
+    {% endif %}
+
+    <div class="main shifted" id="main">
+      {% if not is_popup and is_nav_sidebar_enabled %}
+        {% block nav-sidebar %}
+          {% include "admin/nav_sidebar.html" %}
+        {% endblock %}
+      {% endif %}
+      <div class="content">
+        {% block messages %}
+          {% if messages %}
+            <ul class="messagelist">{% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+            {% endfor %}</ul>
+          {% endif %}
+        {% endblock messages %}
+        <!-- Content -->
+        <div id="content" class="{% block coltype %}colM{% endblock %}">
+          {% block pretitle %}{% endblock %}
+          {% block content_title %}{% if title %}<h1 style="font-size: 22px;text-align: center;">{{ title }}</h1>{% endif %}{% endblock %}
+          {% block content_subtitle %}{% if subtitle %}<h2>{{ subtitle }}</h2>{% endif %}{% endblock %}
+          {% block content %}
+            {% block object-tools %}{% endblock %}
+            {{ content }}
+          {% endblock %}
+          {% block sidebar %}{% endblock %}
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        {% block footer %}<div id="footer"></div>{% endblock %}
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+
+
+<style>
+
+    .submit-row a.deletelink {
+    height: 34px;
+}
+    form#inputframingmodule_form fieldset.module.aligned .form-row,
+    form#inputmodule_form fieldset.module.aligned .form-row {
+        display: inline-block;
+        width: 30%;
+        /*height: 83px !important;*/
+    }
+
+    form#inputframingmodule_form td.field-email_of_SPOC input,
+    form#inputframingmodule_form td.field-LM_of_SPOC input,
+    form#inputframingmodule_form td.field-email_of_SPOC_LM input,
+    form#inputframingmodule_form td.field-assessment_date input,
+    form#inputframingmodule_form td.field-assessment_frequency input,
+    form#inputframingmodule_form td.field-prior_notification input,
+    form#inputframingmodule_form td.field-reminder_notification input
+    {
+        width: 100px;
+    }
+
+    textarea#id_question_note_to_SPOC,
+    textarea#id_root_cause {
+        width: 95% !important;
+    }
+
+    textarea#id_question_note_to_SPOC {
+    height:50px;
+    
+    }
+        form#inputmodule_form fieldset.module.aligned .form-row.field-percentage_rate,
+        form#inputmodule_form fieldset.module.aligned .form-row.field-objects_status {
+            display: none;
+        }
+
+    .form-row.field-compliance_question,
+    .form-row.field-user_comment,
+    .form-row.field-source_of_obligation,
+    .form-row.field-compliance_statement,
+    .form-row.field-root_cause {
+        width: 100% !important;
+    }
+
+    textarea#id_compliance_question, textarea#id_user_comment,
+    textarea#id_title,
+    textarea#id_source_of_obligation {
+        width: 90% !important;
+    }
+
+    .readonly {
+        float: left;
+        margin: 0 !important;
+        font-weight: bold;
+    }
+
+    .form-row.field-objects_status, .form-row.field-compliance_owner_function {
+        display: none;
+    }
+
+    form#inputframingmodule_form fieldset.module.aligned .form-row select {
+        width: 280px;
+    }
+
+
+
+    .form-row.field-unique_id div div {
+        float: left;
+        text-align: left;
+        margin: 0 !important;
+        font-weight: 800;
+        color: green;
+        font-size: 13px;
+    }
+
+    .form-row.field-question_note_to_SPOC,
+    .form-row.field-title {
+        width: 100% !important;
+        clear: both !important;
+        display: block;
+    }
+
+    .form-row.field-proof_of_compliance label {
+        text-align: left;
+    }
+    p.datetime {
+        float: left;
+        margin: 0 !important;
+    }
+    nav#nav-sidebar, button#toggle-nav-sidebar 
+    {
+        display: none;
+    }
+
+
+    #inputframingmodule_form table 
+    {
+        display: inline-block;
+        float: left;
+    }
+
+    #inputframingmodule_form tbody 
+    {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .main.shifted > #nav-sidebar + .content 
+    {
+        max-width: 100%;
+    }
+    #header {
+        background: #ED1C24 !important;
+    }
+
+    .item-list {
+    width: 1200px;
+    margin: auto;
+    display: block;
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    padding: 5px;
+}
+
+.item-list li {
+    list-style: none;
+    margin-top: 1%;
+}
+
+
+</style>
+</body>
+</html>

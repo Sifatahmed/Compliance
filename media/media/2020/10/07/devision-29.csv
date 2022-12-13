@@ -1,0 +1,352 @@
+Item Code,Product,Unit,Unit,Rate
+29.01.01,Single layer brick flat soling road.,Per Sqm,Per Sqm,28.91415351
+29.02.01,Herring Bone Bond (HBB) road over a single layer brick flat soling.,Per Sqm,Per Sqm,47.20004511
+29.02.02,Bituminous road over khoa consolidation.,Per Sqm,Per Sqm,68.32454082
+29.02.03,Cement Concrete road.,Per Sqm,Per Sqm,188.8001804
+29.02.04,RCC Road.,Per Sqm,Per Sqm,378.9206419
+29.03.01,Layout and marking for earthwork in excavation in foundation accepted by the Engineer-in-charge. [Plinth area of the structure shall be considered for measurement],Per Sqm,Per Sqm,18
+29.03.02,"Earth work exacavation in  trenches for installation of pipe line, thurst blocks, sluice valves chamber etc. in/c. removal of any obstacles  upto required depth including protecting and mantaining the trench at any sorts of clay. ",Per Cum,Per Cum,78.4299195
+29.04.01,"Sand Filling in Excavation trenches and inside plinth by supplying sand (minimum FM 0.80) free from clay, vegetation and other organic matter and filling and compacting in layers by sprinkling water, dressing and leveling etc. in 150 mm thick pipe bedding surround and (a) for pipes in road verges to a height of 150 mm above the top of the pipe and (b) for pipes in roads pavement/ road crossing upto the bottom of the original road structure etc. all complete as per direction of Engineer-in-Charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit). ",Per Cum,Per Cum,744
+29.04.02,"Backfilling with earth of the trench above pipe zone (from 150mm above the top of the pipe to road surface) including watering and compacting in layers not exceeding 150mm  all complete as per direction of Engineer-in-Charge.   (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit). ",Per Cum,Per Cum,76.6875883
+29.05.01,"100 mm /4"" dia. uPVC pipe, wall thickness 3.40 mm - 4.00mm, conforming to BS 3505, Class-B.",Per Meter,Per Meter,391.2170878
+29.05.02,"150 mm /6"" dia. uPVC pipe, wall thickness 4.50 mm - 5.20mm, conforming to BS 3505, Class-B.",Per Meter,Per Meter,832.7422799
+29.05.03,"200 mm /8"" dia. uPVC pipe, wall thickness 5.30 mm - 6.10 mm.,  conforming to BS 3505, Class-B.",Per Meter,Per Meter,1295.740443
+29.05.04,"250 mm /10"" dia. uPVC pipe, wall thickness 6.60 mm - 7.60 mm,  conforming to BS 3505, Class-B.",Per Meter,Per Meter,2063.859305
+29.05.05,"300 mm /12"" dia. uPVC pipe, wall thickness 7.80 mm - 9.00 mm, conforming to BS 3505, Class-B.",Per Meter,Per Meter,3071.452923
+29.06.01,"100 mm /4"" dia. uPVC pipe, wall thickness 4.50 mm - 5.20 mm, conforming to BS 3505, Class-C.",Per Meter,Per Meter,575.8846415
+29.06.02,"150 mm /6"" dia. uPVC pipe, wall thickness 6.60 mm - 7.60 mm, conforming to BS 3505, Class-C.",Per Meter,Per Meter,1246.045852
+29.06.03,"200 mm /8"" dia. uPVC pipe, wall thickness 7.80 mm - 9.00 mm, conforming to BS 3505, Class-C.",Per Meter,Per Meter,1887.371931
+29.06.04,"250 mm /10"" dia. uPVC pipe, wall thickness 9.70 mm - 11.20 mm,  conforming to BS 3505, Class-C.",Per Meter,Per Meter,2961.429508
+29.06.05,"300 mm /12"" dia. uPVC pipe, wall thickness 11.50 mm - 13.30 mm,  conforming to BS 3505, Class-C.",Per Meter,Per Meter,4269.644725
+29.07.01,"110 mm dia. uPVC pipe, mimimum thickness 3.40 mm, PN-8, ISO 1452-2: 2009.",Per Meter,Per Meter,422.7107791
+29.07.02,"160 mm dia. uPVC pipe, mimimum thickness 4.90 mm, PN-8, ISO 1452-2: 2009.",Per Meter,Per Meter,857.0783141
+29.07.03," 225 mm dia. uPVC pipe, mimimum thickness 6.9 mm, PN-8, ISO 1452-2: 2009.",Per Meter,Per Meter,1735.425095
+29.07.04,"280 mm dia. uPVC pipe, mimimum thickness 8.60 mm, PN-8, ISO 1452-2: 2009.",Per Meter,Per Meter,2671.237637
+29.07.05,"315 mm dia. uPVC pipe, mimimum thickness 9.70 mm, PN-8, ISO 1452-2: 2009.",Per Meter,Per Meter,3324.424976
+29.08.01,"100 mm /4"" dia. 90º uPVC bend, wall thickness 3.40 mm -4.00 mm.",Each,Each,822.1080465
+29.08.02,"100 mm /4"" dia. 60º uPVC bend, wall thickness 3.40 mm -4.00 mm.",Each,Each,753.3945381
+29.08.03,"100 mm /4"" dia. 45º uPVC bend, wall thickness 3.40 mm -4.00 mm.",Each,Each,737.4431879
+29.08.04,"100 mm /4"" dia. 22.50º uPVC bend, wall thickness 3.40 mm -4.00 mm.",Each,Each,692.0431913
+29.08.05,"100 mm /4"" dia. 11.25º uPVC bend, wall thickness 3.40 mm -4.00 mm.",Each,Each,576.7026595
+29.08.06,"150 mm /6"" dia. 90º uPVC bend, wall thickness 4.50 mm -5.20 mm.",Each,Each,1463.22962
+29.08.07,"150 mm /6"" dia. 60º uPVC bend, wall thickness 4.50 mm -5.20 mm.",Each,Each,1401.878273
+29.08.08,"150 mm /6"" dia. 45º uPVC bend, wall thickness 4.50 mm -5.20 mm.",Each,Each,1340.526926
+29.08.09,"150 mm /6"" dia. 22.50º uPVC bend, wall thickness 4.50 mm -5.20 mm.",Each,Each,1279.17558
+29.08.10,"150 mm /6"" dia. 11.25º uPVC bend, wall thickness 4.50 mm -5.20 mm.",Each,Each,1156.472886
+29.08.11,"200 mm /8"" dia. 90º uPVC bend, wall thickness 5.30 mm -6.10 mm.",Each,Each,2244.232264
+29.08.12,"200 mm /8"" dia. 60º uPVC bend, wall thickness 5.30 mm -6.10 mm.",Each,Each,1876.124184
+29.08.13,"200 mm /8"" dia. 45º uPVC bend, wall thickness 5.30 mm -6.10 mm.",Each,Each,1814.772837
+29.08.14,"200 mm /8"" dia. 22.50º uPVC bend, wall thickness 5.30 mm -6.10 mm.",Each,Each,1692.070143
+29.08.15,"200 mm /8"" dia. 11.25º uPVC bend, wall thickness 5.30 mm -6.10 mm.",Each,Each,1630.718797
+29.08.16,"250 mm /10"" dia. 90º uPVC bend, wall thickness 6.60 mm -7.60 mm.",Each,Each,2951.613292
+29.08.17,"250 mm /10"" dia. 60º uPVC bend, wall thickness 6.60 mm -7.60 mm.",Each,Each,2828.910599
+29.08.18,"250 mm /10"" dia. 45º uPVC bend, wall thickness 6.60 mm -7.60 mm.",Each,Each,2767.559252
+29.08.19,"250 mm /10"" dia. 22.50º uPVC bend, wall thickness 6.60 mm -7.60 mm.",Each,Each,2644.856558
+29.08.20,"250 mm /10"" dia. 11.25º uPVC bend, wall thickness 6.60 mm -7.60 mm.",Each,Each,2399.451171
+29.08.21,"300 mm /12"" dia. 90º uPVC bend, wall thickness 7.80 mm -9.00 mm.",Each,Each,3528.561357
+29.08.22,"300 mm /12"" dia. 60º uPVC bend, wall thickness 7.80 mm -9.00 mm.",Each,Each,3405.858663
+29.08.23,"300 mm /12"" dia. 45º uPVC bend, wall thickness 7.80 mm -9.00 mm.",Each,Each,3221.804623
+29.08.24,"300 mm /12"" dia. 22.50º uPVC bend, wall thickness 7.80 mm -9.00 mm.",Each,Each,3160.453276
+29.08.25,"300 mm /12"" dia. 11.25º uPVC bend, wall thickness 7.80 mm -9.00 mm.",Each,Each,3099.10193
+29.09.01,"100 mm /4"" dia. 90⁰  uPVC bend, wall thickness 4.50 mm - 5.20 mm.",Each,Each,925.178309
+29.09.02,"100 mm /4"" dia. 60⁰  uPVC bend, wall thickness 4.50 mm - 5.20 mm.",Each,Each,868.73507
+29.09.03,"100 mm /4"" dia. 45⁰  uPVC bend, wall thickness 4.50 mm - 5.20 mm.",Each,Each,845.4215582
+29.09.04,"100 mm /4"" dia. 22.50⁰  uPVC bend, wall thickness 4.50 mm - 5.20 mm.",Each,Each,797.5675078
+29.09.05,"100 mm /4"" dia. 11.25⁰  uPVC bend, wall thickness 4.50 mm - 5.20 mm.",Each,Each,784.0702115
+29.09.06,"150 mm /6"" dia. 90⁰  uPVC bend, wall thickness 6.60 mm - 7.60 mm.",Each,Each,2383.499821
+29.09.07,"150 mm /6"" dia. 60⁰  uPVC bend, wall thickness 6.60 mm - 7.60 mm.",Each,Each,2322.148474
+29.09.08,"150 mm /6"" dia. 45⁰  uPVC bend, wall thickness 6.60 mm - 7.60 mm.",Each,Each,2260.797128
+29.09.09,"150 mm /6"" dia. 22.50⁰  uPVC bend, wall thickness 6.60 mm - 7.60 mm.",Each,Each,2199.445781
+29.09.10,"150 mm /6"" dia. 11.25⁰  uPVC bend, wall thickness 6.60 mm - 7.60 mm.",Each,Each,2138.094434
+29.09.11,"200 mm /8"" dia. 90⁰  uPVC bend, wall thickness 7.80 mm - 9.00 mm.",Each,Each,3716.664586
+29.09.12,"200 mm /8"" dia. 60⁰  uPVC bend, wall thickness 7.80 mm - 9.00 mm.",Each,Each,3593.961893
+29.09.13,"200 mm /8"" dia. 45⁰  uPVC bend, wall thickness 7.80 mm - 9.00 mm.",Each,Each,3471.259199
+29.09.14,"200 mm /8"" dia. 22.50⁰  uPVC bend, wall thickness 7.80 mm - 9.00 mm.",Each,Each,3348.556506
+29.09.15,"200 mm /8"" dia. 11.25⁰  uPVC bend, wall thickness 7.80 mm - 9.00 mm.",Each,Each,3225.853812
+29.09.16,"250 mm /10"" dia. 90⁰  uPVC bend, wall thickness 9.70 mm - 11.20 mm.",Each,Each,4792.153695
+29.09.17,"250 mm /10"" dia. 60⁰  uPVC bend, wall thickness 9.70 mm - 11.20 mm.",Each,Each,4608.099654
+29.09.18,"250 mm /10"" dia. 45⁰  uPVC bend, wall thickness 9.70 mm - 11.20 mm.",Each,Each,4399.505075
+29.09.19,"250 mm /10"" dia. 22.50⁰  uPVC bend, wall thickness 9.70 mm - 11.20 mm.",Each,Each,4178.640227
+29.09.20,"250 mm /10"" dia. 11.25⁰  uPVC bend, wall thickness 9.70 mm - 11.20 mm.",Each,Each,4080.478072
+29.09.21,"300 mm /12"" dia. 90⁰  uPVC bend, wall thickness 11.50 mm - 13.30 mm.",Each,Each,6534.777348
+29.09.22,"300 mm /12"" dia. 60⁰  uPVC bend, wall thickness 11.50 mm - 13.30 mm.",Each,Each,6289.371961
+29.09.23,"300 mm /12"" dia. 45⁰  uPVC bend, wall thickness 11.50 mm - 13.30 mm.",Each,Each,5982.615227
+29.09.24,"300 mm /12"" dia. 22.50⁰  uPVC bend, wall thickness 11.50 mm - 13.30 mm.",Each,Each,5798.561187
+29.09.25,"300 mm /12"" dia. 11.25⁰  uPVC bend, wall thickness 11.50 mm - 13.30 mm.",Each,Each,5553.1558
+29.10.01,"110 mm dia. 90º uPVC bend, wall thickness 3.40 mm - 4.00 mm, PN-8, having socket Each end & rubber ring.             ",Each,Each,1374.270167
+29.10.02,"110 mm dia. 60º uPVC bend, wall thickness 3.40 mm - 4.00 mm, PN-8, having socket Each end & rubber ring.             ",Each,Each,1312.91882
+29.10.03,"110 mm dia. 45º uPVC bend, wall thickness 3.40 mm - 4.00 mm, PN-8, having socket Each end & rubber ring.             ",Each,Each,1282.243147
+29.10.04,"110 mm dia. 22.50º uPVC bend, wall thickness 3.40 mm - 4.00 mm, PN-8, having socket Each end & rubber ring.             ",Each,Each,1251.567474
+29.10.05,"110 mm dia. 11.25º uPVC bend, wall thickness 3.40 mm - 4.00 mm, PN-8, having socket Each end & rubber ring.             ",Each,Each,1220.8918
+29.10.06,"160 mm dia. 90⁰ uPVC bend, PN-8, wall thickness 4.90 mm - 5.50 mm, having socket Each end & rubber ring. ",Each,Each,2513.564676
+29.10.07,"160 mm dia. 60⁰ uPVC bend, PN-8, wall thickness 4.90 mm - 5.50 mm, having socket Each end & rubber ring.             ",Each,Each,2476.753868
+29.10.08,"160 mm dia. 45⁰ uPVC bend, PN-8, wall thickness 4.90 mm - 5.50 mm, having socket Each end & rubber ring.             ",Each,Each,2427.672791
+29.10.09,"160 mm dia. 22.50⁰ uPVC bend, PN-8, wall thickness 4.90 mm - 5.50 mm, having socket Each end & rubber ring.             ",Each,Each,2390.861983
+29.10.10,"160 mm dia. 11.25⁰ uPVC bend, PN-8, wall thickness 4.90 mm - 5.50 mm, having socket Each end & rubber ring. ",Each,Each,2329.510636
+29.10.11,"225 mm dia. 90º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.",Each,Each,5819.788753
+29.10.12,"225 mm dia. 60º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.             ",Each,Each,5574.383366
+29.10.13,"225 mm dia. 45º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.",Each,Each,5359.653652
+29.10.14,"225 mm dia. 22.50º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.",Each,Each,5236.950959
+29.10.15,"225 mm dia. 11.25º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.",Each,Each,5175.599612
+29.10.16,"250 mm dia. 90º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring. ",Each,Each,7199.580541
+29.10.17,"250 mm dia. 60º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring. ",Each,Each,7076.877848
+29.10.18,"250 mm dia. 45º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.",Each,Each,6954.175154
+29.10.19,"250 mm dia. 22.50º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring.",Each,Each,6831.472461
+29.10.20,"250 mm dia. 11.25º uPVC bend, PN-8, wall thickness 6.9 mm - 7.80 mm, having socket Each end & rubber ring. ",Each,Each,6770.121114
+29.10.21,"315 mm dia. 90º uPVC bend, PN-8, wall thickness 10.90 mm, having socket Each end & rubber ring.",Each,Each,8726.247454
+29.10.22,"315 mm dia. 60º uPVC bend, PN-8, wall thickness 10.90 mm, having socket Each end & rubber ring.             ",Each,Each,8480.842067
+29.10.23,"315 mm dia. 45º uPVC bend, PN-8, wall thickness 10.90 mm, having socket Each end & rubber ring.             ",Each,Each,8358.139373
+29.10.24,"315 mm dia. 22.50º uPVC bend, PN-8, wall thickness 10.90 mm, having socket Each end & rubber ring.             ",Each,Each,8235.43668
+29.10.25,"315 mm dia. 11.25º uPVC bend, PN-8, wall thickness 10.90 mm, having socket Each end & rubber ring.             ",Each,Each,8174.085333
+29.11.01,"100 mm /4"" dia. (OD) uPVC End Cap, wall thickness 3.40 mm -4.00 mm.",Each,Each,628.8513042
+29.11.02,"150 mm /6"" dia. (OD) uPVC End Cap, wall thickness 4.50 mm -5.20 mm.  ",Each,Each,808.6107502
+29.11.03,"200 mm /8"" dia. (OD) uPVC End Cap, wall thickness 5.30 mm -6.10 mm.",Each,Each,1124.570186
+29.11.04,"250 mm /10"" dia. (OD) uPVC End Cap, wall thickness 6.60 mm -7.60 mm.",Each,Each,1525.19448
+29.11.05,"300 mm /12"" dia. (OD) uPVC End Cap, wall thickness 7.80 mm -9.00 mm.",Each,Each,2014.164714
+29.12.01,"100 mm /4"" dia. uPVC End Cap, wall thickness 4.50 mm - 5.20 mm.",Each,Each,720.8783243
+29.12.02,"150 mm /6"" dia. uPVC End Cap, wall thickness 6.60 mm - 7.60 mm.",Each,Each,931.3134437
+29.12.03,"200 mm /8"" dia. uPVC End Cap, wall thickness 7.80 mm - 9.00 mm.",Each,Each,1369.975573
+29.12.04,"250 mm /10"" dia. uPVC End Cap, wall thickness 9.70 mm - 11.20 mm.",Each,Each,1831.951214
+29.12.05,"300 mm /12"" dia. uPVC End Cap, wall thickness 11.5 mm -13.3 mm.",Each,Each,2198.218754
+29.13.01,"110 mm dia. uPVC End Cap, PN-8 with socket in one end & rubber ring.",Each,Each,684.0675163
+29.13.02,"160 mm dia. uPVC End Cap, PN-8 with socket in one end & rubber ring.",Each,Each,777.3215633
+29.13.03,"225 mm dia. uPVC End Cap, PN-8 with socket in one end & rubber ring.",Each,Each,850.9431794
+29.13.04,"280 mm dia. uPVC End Cap, PN-8 with socket in one end & rubber ring.",Each,Each,973.6458729
+29.13.05,"315 mm dia. uPVC End Cap, PN-8 with socket in one end & rubber ring.",Each,Each,1157.699913
+29.14.01,"100 mm /4"" dia. (OD) uPVC Socket Adopter.",Each,Each,426.3918599
+29.14.02,"150 mm /6"" dia. (OD) uPVC Socket Adopter.",Each,Each,747.2594034
+29.14.03,"200 mm /8"" dia. (OD) uPVC Socket Adopter.",Each,Each,1124.570186
+29.14.04,"250 mm /10"" dia. (OD) uPVC Socket Adopter.",Each,Each,1586.545827
+29.14.05,"300 mm /12"" dia. uPVC Socket Adopter.",Each,Each,3547.948383
+29.15.01,"100 mm /4"" dia. uPVC Socket Adopter. thickness 4.50 mm - 5.20 mm.",Each,Each,487.7432067
+29.15.02,"150 mm /6"" dia. uPVC Socketed Adopter. thickness 6.60 mm.",Each,Each,869.9620969
+29.15.03,"200 mm /8"" dia. uPVC Socketed Adopter. thickness 7.80 mm -9.00 mm.",Each,Each,1369.975573
+29.15.04,"250 mm /10"" dia. uPVC Socketed Adopter. thickness 9.70 mm - 11.20 mm.",Each,Each,1831.951214
+29.15.05," 300mm /12"" dia. uPVC Socketed Adopter. thickness11.5 mm - 13.3 mm.",Each,Each,2136.867407
+29.16.01," 100 mm /4"" dia. uPVC Socket Adopter, PN-8.",Each,Each,463.202668
+29.16.02," 150 mm /4"" dia. uPVC Socket Adopter, PN-8.",Each,Each,685.2945432
+29.16.03," 200 mm /4"" dia. uPVC Socket Adopter, PN-8.",Each,Each,881.6188528
+29.16.04," 250 mm /4"" dia. uPVC Socket Adopter, PN-8.",Each,Each,1271.813418
+29.16.05," 300 mm /4"" dia. uPVC Socket Adopter, PN-8.",Each,Each,1682.867441
+29.17.01,150 x 100 mm dia. uPVC Reducer.,Each,Each,1115.060727
+29.17.02,200 x 100 mm dia. uPVC Reducer.,Each,Each,1471.818809
+29.17.03,200 x 150 mm dia. uPVC Reducer.,Each,Each,1703.420143
+29.17.04,250 x 200 mm dia. uPVC Reducer.,Each,Each,2110.179571
+29.17.05,300 x 250 mm dia. uPVC Reducer.,Each,Each,2537.614404
+29.18.01,150 x 100 mm dia. uPVC Reducer.,Each,Each,1483.168808
+29.18.02,200 x 100 mm dia. uPVC Reducer.,Each,Each,1839.926889
+29.18.03,200 x 150 mm dia. uPVC Reducer.,Each,Each,2010.176876
+29.18.04,250 x 200 mm dia. uPVC Reducer.,Each,Each,2539.638999
+29.18.05,300 x 250 mm dia. uPVC Reducer.,Each,Each,2967.073832
+29.19.01,"160 x 110 mm dia. uPVC Reducer, PN-8.",Each,Each,1483.168808
+29.19.02,"225 x 110 mm dia. uPVC Reducer, PN-8.",Each,Each,2508.963325
+29.19.03,"225 x 160 mm dia. uPVC Reducer, PN-8.",Each,Each,2774.001143
+29.19.04,"280 x 225 mm dia. uPVC Reducer, PN-8.",Each,Each,3331.071372
+29.19.05,"315 x 280 mm dia. uPVC Reducer, PN-8.",Each,Each,3998.267268
+29.20.01,100 x 100 x 100 mm dia. uPVC Tee.,Each,Each,1131.932348
+29.20.02,150 x 150 x 150 mm dia. uPVC Tee.,Each,Each,2270.9201
+29.20.03,150 x 100 x 150 mm dia. uPVC Tee.,Each,Each,1857.412023
+29.20.04,200 x 200 x 200 mm dia. uPVC Tee.,Each,Each,3758.383502
+29.20.05,200 x 150 x 200 mm dia. uPVC Tee.,Each,Each,3165.729492
+29.20.06,200 x 100 x 200 mm dia. uPVC Tee.,Each,Each,2728.907903
+29.20.07,250 x 250 x 250 mm dia. uPVC Tee.,Each,Each,5409.041486
+29.20.08,250 x 200 x 250 mm dia. uPVC Tee.,Each,Each,4750.128022
+29.20.09,250 x 150 x 250 mm dia. uPVC Tee.,Each,Each,4087.533477
+29.20.10,300 x 300 x 300 mm dia. uPVC Tee.,Each,Each,9195.339851
+29.20.11,300 x 250 x 300 mm dia. uPVC Tee.,Each,Each,7973.221024
+29.20.12,300 x 200 x 300 mm dia. uPVC Tee.,Each,Each,7162.15622
+29.20.13,300 x 150 x 300 mm dia. uPVC Tee.,Each,Each,6418.577897
+29.20.14, 300 x 100 x 300 mm dia. uPVC Tee.,Each,Each,5883.594153
+29.21.01,100 x 100 x 100 mm dia. uPVC Tee.,Each,Each,1303.716118
+29.21.02,150 x 150 x 150 mm dia. uPVC Tee.,Each,Each,3013.271396
+29.21.03,150 x 100 x 150 mm dia. uPVC Tee.,Each,Each,2355.584958
+29.21.04,200 x 200 x 200 mm dia. uPVC Tee.,Each,Each,4889.702336
+29.21.05,200 x 150 x 200 mm dia. uPVC Tee.,Each,Each,4109.313205
+29.21.06,200 x 100 x 200 mm dia. uPVC Tee.,Each,Each,3537.518654
+29.21.07,250 x 250 x 250 mm dia. uPVC Tee.,Each,Each,6936.69002
+29.21.08,250 x 200 x 250 mm dia. uPVC Tee.,Each,Each,5986.971173
+29.21.09,250 x 150 x 250 mm dia. uPVC Tee.,Each,Each,5261.798254
+29.21.10,300 x 300 x 300 mm dia. uPVC Tee.,Each,Each,10007.63168
+29.21.11,300 x 250 x 300 mm dia. uPVC Tee.,Each,Each,8623.545299
+29.21.12,300 x 200 x 300 mm dia. uPVC Tee.,Each,Each,7652.966994
+29.21.13,300 x 150 x 300 mm dia. uPVC Tee .,Each,Each,6970.740018
+29.21.14,300 x 100 x 300 mm dia. uPVC Tee.,Each,Each,6336.367092
+29.22.01,110 x 110 x 110 mm dia. uPVC Tee.,Each,Each,1309.851253
+29.22.02,160 x 160 x 160 mm dia. uPVC Tee.,Each,Each,3605.925405
+29.22.03,160 x 160 x 110 mm dia. uPVC Tee.,Each,Each,2666.022773
+29.22.04,225 x 225 x 225 mm dia. uPVC Tee.,Each,Each,6367.042766
+29.22.05,225 x 225 x 160 mm dia. uPVC Tee.,Each,Each,4595.215872
+29.22.06,225 x 225 x 110 mm dia. uPVC Tee.,Each,Each,4162.075364
+29.22.07,280 x 280 x 280 mm dia. uPVC Tee.,Each,Each,7494.987276
+29.22.08,280 x 280 x 225 mm dia. uPVC Tee.,Each,Each,6929.327859
+29.22.09,280 x 280 x 180 mm dia. uPVC Tee.,Each,Each,6615.208963
+29.22.10,315 x 315 x 315 mm dia. uPVC Tee.,Each,Each,9516.820908
+29.22.11,315 x 315 x 280 mm dia. uPVC Tee.,Each,Each,8279.977757
+29.22.12,315 x 315 x 225 mm dia. uPVC Tee.,Each,Each,7407.561607
+29.22.13,315 x 315 x 180 mm dia. uPVC Tee.,Each,Each,6663.983284
+29.22.14,315 x 315 x 110 mm dia. uPVC Tee.,Each,Each,6153.540079
+29.23.01,110 mm dia. uPVC Strainght Coupling. ,Each,Each,1072.421541
+29.23.02,160 mm dia. uPVC Strainght Coupling.,Each,Each,1862.013374
+29.23.03,225 mm dia. uPVC Strainght Coupling.,Each,Each,3311.745698
+29.23.04,280 mm dia. uPVC Strainght Coupling.,Each,Each,5318.54825
+29.23.05,315 mm dia. uPVC Strainght Coupling.,Each,Each,6932.702183
+29.24.01,110 mm dia. HDPE pipe wall thickness 6.60 mm - 7.40 mm. ,Per Meter,Per Meter,1073.853073
+29.24.02,160 mm dia. HDPE pipe wall thickness 9.50 mm -10.60 mm.,Per Meter,Per Meter,2064.063809
+29.24.03,180 mm dia. HDPE pipe wall thickness 10.70 mm -11.90 mm.,Per Meter,Per Meter,2594.34395
+29.24.04,200 mm dia. HDPE pipe wall thickness 11.90 mm - 13.20 mm.,Per Meter,Per Meter,3149.982647
+29.24.05,225 mm dia. HDPE pipe wall thickness 13.40 mm - 14.90 mm.,Per Meter,Per Meter,3956.957361
+29.24.06,250 mm dia. HDPE pipe wall thickness 14.80 mm - 16.40 mm.,Per Meter,Per Meter,4835.917655
+29.24.07,280 mm dia. HDPE pipe wall thickness 16.60 mm -18.40 mm.,Per Meter,Per Meter,5975.212164
+29.24.08,315 mm dia. HDPE pipe wall thickness 18.70 mm -20.70 mm.,Per Meter,Per Meter,7502.860699
+29.24.09,355 mm dia. HDPE pipe wall thickness 21.10 mm -23.40 mm.,Per Meter,Per Meter,9494.938928
+29.24.10,400 mm dia. HDPE pipe wall thickness 23.70 mm - 26.20 mm.,Per Meter,Per Meter,11927.92884
+29.25.01,110 mm dia. HDPE Bend.,Each,Each,3931.3943
+29.25.02,160 mm dia. HDPE Bend.,Each,Each,5086.026646
+29.25.03,180 mm dia. HDPE Bend.,Each,Each,6556.004914
+29.25.04,200 mm dia. HDPE Bend.,Each,Each,7623.518347
+29.25.05,225 mm dia. HDPE Bend.,Each,Each,9399.026322
+29.25.06,250 mm dia. HDPE Bend.,Each,Each,11007.65863
+29.25.07,280 mm dia. HDPE Bend.,Each,Each,11143.85862
+29.25.08,315 mm dia. HDPE Bend.,Each,Each,13573.37195
+29.25.09,355 mm dia. HDPE Bend.,Each,Each,17625.01489
+29.25.10,400 mm dia. HDPE Bend.,Each,Each,22693.86316
+29.26.01,110 mm dia.  HDPE Coupling.,Each,Each,6009.977928
+29.26.02,160 mm dia.  HDPE Coupling.,Each,Each,7911.869677
+29.26.03,180 mm dia.  HDPE Coupling.,Each,Each,9978.183035
+29.26.04,200 mm dia.  HDPE Coupling.,Each,Each,12010.13964
+29.26.05,225 mm dia.  HDPE Coupling.,Each,Each,14348.85298
+29.26.06,250 mm dia.  HDPE Coupling.,Each,Each,16888.79873
+29.26.07,280 mm dia.  HDPE Coupling.,Each,Each,21757.64161
+29.26.08,315 mm dia.  HDPE Coupling.,Each,Each,23816.59281
+29.26.09,355 mm dia.  HDPE Coupling.,Each,Each,29097.71674
+29.26.10,400 mm dia.  HDPE Coupling.,Each,Each,35546.97031
+29.27.01,110 x 160 mm dia.  HDPE Reducer.,Each,Each,5764.572541
+29.27.02,110 x 180 mm dia.  HDPE Reducer. ,Each,Each,6009.977928
+29.27.03,110 x 200 mm dia.  HDPE Reducer.,Each,Each,6255.383315
+29.27.04,160 x 200 mm dia.  HDPE Reducer.,Each,Each,8451.761528
+29.27.05,160 x 225 mm dia.  HDPE Reducer.,Each,Each,8758.518262
+29.27.06,160 x 250 mm dia.  HDPE Reducer.,Each,Each,8892.264198
+29.27.07,180 x 225 mm dia.  HDPE Reducer.,Each,Each,10419.91273
+29.27.08,180 x 250 mm dia.  HDPE Reducer.,Each,Each,10638.32353
+29.27.09,180 x 280 mm dia.  HDPE Reducer.,Each,Each,10883.72891
+29.27.10,200 x 250 mm dia.  HDPE Reducer.,Each,Each,12255.54503
+29.27.11,200 x 280 mm dia.  HDPE Reducer.,Each,Each,12999.12335
+29.27.12,200 x 315 mm dia.  HDPE Reducer.,Each,Each,13523.06385
+29.28.01,110 x 110 x 110 mm dia.  HDPE Tee.,Each,Each,5579.291473
+29.28.02,160 x 160 x 160 mm dia.  HDPE Tee.,Each,Each,7419.831876
+29.28.03,160 x 110 x 160 mm dia.  HDPE Tee.,Each,Each,7419.831876
+29.28.04,180 x 180 x 180 mm dia.  HDPE Tee.,Each,Each,9507.004692
+29.28.05,180 x 150 x 180 mm dia.  HDPE Tee.,Each,Each,10990.48026
+29.28.06,180 x 110 x 180 mm dia.  HDPE Tee.,Each,Each,10990.48026
+29.28.07,225 x 225 x 225 mm dia.  HDPE Tee.,Each,Each,12934.09092
+29.28.08,225 x 180 x 225 mm dia.  HDPE Tee.,Each,Each,12934.09092
+29.28.09,250x 250 x 250 mm dia.  HDPE Tee.,Each,Each,14627.38809
+29.28.10,280 x 280 x 280 mm dia.  HDPE Tee. ,Each,Each,17728.08516
+29.28.11,315 x 315 x 315 mm dia.  HDPE Tee. ,Each,Each,19252.05261
+29.28.12,355 x 355 x 355 mm dia.  HDPE Tee.,Each,Each,24382.25223
+29.28.13,400 x 400 x 400 mm dia.  HDPE Tee.,Each,Each,31755.45708
+29.29.01,"100 mm dia. (ND) GI/ MS Pipe, wall thicnkess 4.50 mm (OD 114.9 mm to ID 105.9 mm) weight 12.10 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless]. [seamless plain ended ]. ",Per Meter,Per Meter,2144.843082
+29.29.02,"150 mm dia. (ND) G.I/ M.S Pipe, wall thickness of pipe 5.00 mm  (OD 166.10 mm to ID 155.30 mm) weight 19.20 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless]. [seamless plain ended ]. ",Per Meter,Per Meter,3240.987144
+29.29.03,"200 mm dia. (ND) G.I/ M.S Pipe,  wall thickness of pipe 6.00 mm (OD 216.30 mm to ID 204.70 mm) weight 30.10 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless]. [seamless plain ended ]. ",Per Meter,Per Meter,4075.774469
+29.29.04,"225 mm dia. G.I/ M.S Pipe,  minimum thickness 6.50 mm, API-5L grade-B ERW as per BS-1387:1967, based on design of the test tube well i/c welding, checking of verticality from time to time etc. all complete as per design, drawings, specification and direction of the Engineer-in-Charge. [welded ERW ASTM A 105 ]. plain ended",Per Meter,Per Meter,4503.188851
+29.29.05,"225 mm dia. (ND) G.I/ M.S Pipe,  wall thickness of pipe 6.50 mm (OD 244.00 mm to ID 230.00 mm) weight 36.10 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless plain ended ]. ",Per Meter,Per Meter,5484.810399
+29.29.06,"250 mm dia. M.S Pipe,  minimum thickness 6.60 mm, API-5L grade-B ERW as per BS-1387:1967, based on design of the test tube well i/c welding, checking of verticality from time to time etc. all complete as per design, drawings, specification and direction of the Engineer-in-Charge. [welded ERW ASTM A 105 ]. plain ended",Per Meter,Per Meter,4881.931165
+29.29.07,"250 mm dia. (ND) M.S Pipe,  wall thickness of pipe 6.60 mm,  (OD 267.40 mm to ID 254.20 mm) weight 42.40 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless plain ended ].",Per Meter,Per Meter,6231.660794
+29.29.08,"300 mm dia. M.S  pipe, minimum thickness 6.70 mm, API-5L grade-B ERW as per BS-1387:1967, based on design of the test tube well i/c welding, checking of verticality from time to time etc. all complete as per design, drawings, specification and direction of the Engineer-in-Charge. [welded ERW ASTM A 105 ]. plain ended",Per Meter,Per Meter,5644.323901
+29.29.09,"300 mm dia. (ND) M.S  pipe, wall thickness of pipe 6.70 mm,  (OD 318.50 mm to ID 304.70 mm) weight 53.00 kg/m can withstand 50 kg/cm2 hydraulic pressure.  [seamless plain ended].",Per Meter,Per Meter,8589.188545
+29.29.10,"350 mm dia MS housing Pipe minimum thickness 7.90 mm, API-5L grade-B ERW as per BS-1387:1967, based on design of the test tube well i/c welding, checking of verticality from time to time etc. all complete as per design, drawings, specification and direction of the Engineer-in-Charge. [welded ERW ASTM A 105 ]. plain ended",Per Meter,Per Meter,6625.945449
+29.29.11,"350 mm dia. (ND) M.S  pipe, wall thickness of pipe 7.90 mm (OD 355.60 mm to ID 339.80 mm) weight 67.70 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless plain ended].",Per Meter,Per Meter,10675.13433
+29.29.12,"400 mm dia. M.S  pipe, minimum thickness 7.90 mm, API-5L grade-B ERW as per BS-1387:1967, based on design of the test tube well i/c welding, checking of verticality from time to time etc. all complete as per design, drawings, specification and direction of the Engineer-in-Charge. [welded ERW ASTM A 105 ]. plain ended",Per Meter,Per Meter,8221.080465
+29.29.13,"400 mm dia. (ND) M.S  pipe, wall thickness of pipe 7.90 mm,  (OD 406.40 mm to ID 390.6 mm) weight 77.53 kg/m can withstand 50 kg/cm2 hydraulic pressure. [seamless plain ended].",Per Meter,Per Meter,12270.26935
+29.30.01,100 mm dia MS bend. wall thickness of pipe 4.50 mm.,Each,Each,4811.172612
+29.30.02,"150 mm MS  bend, wall thickness of pipe 4.85 mm.",Each,Each,7032.091364
+29.30.03,"200 mm dia. MS  bend, wall thickness of pipe 5.80 mm.",Each,Each,9342.276326
+29.30.04,"225 mm dia. MS bend, wall thickness of pipe 6.00 mm.",Each,Each,10615.62353
+29.30.05,"250 mm MS bend, wall thickness of pipe 6.60 mm.",Each,Each,11689.2721
+29.30.06,"300 mm MS bend, wall thickness of pipe 6.90 mm.",Each,Each,14379.83541
+29.30.07,"350 mm MS  bend, wall thickness of pipe 7.90 mm.",Each,Each,16251.05148
+29.30.08,"400 mm MS bend, wall thickness of pipe 7.90 mm.",Each,Each,17098.31358
+29.31.01,"100 mm MS  pipe, Wall thickness of pipe 4.50 mm.",Each,Each,6225.775155
+29.31.02,150 mm MS  pipe ( Wall thickness of pipe 4.85 mm.,Each,Each,8706.633428
+29.31.03,"225 mm MS  pipe, Wall thickness of pipe 6.00 mm.",Each,Each,12701.86994
+29.31.04,"250 mm MS  pipe, Wall thickness of pipe 6.60 mm.",Each,Each,13924.27098
+29.31.05,"300 mm MS  pipe, Wall thickness of pipe 6.60 mm.",Each,Each,16891.31414
+29.31.06,"350 mm MS  pipe, Wall thickness of pipe 7.90 mm.",Each,Each,18960.11836
+29.31.07,"400 mm MS  pipe, Wall thickness of pipe 7.90 mm.",Each,Each,20152.10141
+29.33.01,100 mm dia dresser coupling.,Each,Each,993.8918174
+29.33.02,150 mm dia dresser coupling.,Each,Each,1141.13505
+29.33.03,200 mm dia dresser coupling.,Each,Each,1619.675554
+29.33.04,225 mm dia dresser coupling.,Each,Each,1791.459325
+29.33.05,250 mm dia dresser coupling.,Each,Each,2061.405251
+29.33.06,300 mm dia dresser coupling.,Each,Each,2674.918718
+29.33.07,350 mm dia dresser coupling.,Each,Each,3030.756529
+29.33.08,400 mm dia dresser coupling.,Each,Each,3644.269997
+29.34.01,100 mm dia Flange Adopter.,Per set,Per set,957.0810093
+29.34.02,150 mm dia Flange Adopter,Per set,Per set,1128.86478
+29.34.03,200 mm dia Flange Adopter.,Per set,Per set,1337.459359
+29.34.04,225 mm dia Flange Adopter.,Per set,Per set,1521.513399
+29.34.05,250 mm dia Flange Adopter.,Per set,Per set,1662.621497
+29.34.06,300 mm dia Flange Adopter.,Per set,Per set,1895.756615
+29.34.07,350 mm dia Flange Adopter.,Per set,Per set,2000.053904
+29.34.08,400 mm dia Flange Adopter.,Per set,Per set,2319.080907
+29.35.01,"Construction of 1.45 m x 1.25 m x 130 m size (outside) sluice valve chamber as per drawing and design with 250mm thick brick work over 75 mm thick cement concrete (1: 2 :4) and  single brick flat soling . 150 mm thick 3 part RCC slab (1:2: 4) using 15 mm dia. MS rod 100 mm center to center in both ways including 2 nos 150 mm dia MS ring in Each part of slab for handling. 12mm thick cement plaster (1:4) in/c NCF in inside wall of chamber, as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Each,Each,26503.51865
+29.35.02,"Construction of 1.35 m x 1.10 m x 1.30 m size (outside) sluice valve chamber as per drawing and design with 250mm thick brick work over 75 mm thick cement concrete (1: 2 :4) and  single brick flat soling . 150 mm thick 3 part RCC slab (1:2: 4) using 15 mm dia. MS rod 100 mm center to center in both ways including 2 nos 150 mm dia MS ring in each part of slab for handling. 12mm thick cement plaster (1:4) in/c. NCF in inside wall of chamber.      specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Each,Each,22869.08787
+29.36,"Construction of 1.15m x 1.15m size (outside) platform and 1meter long drain of Street Hydrant as per drawing and design with 100 mm thick cement concrete (1: 2 :4) over  single brick flat soling .  RCC post (1:2: 4) of 1.40 m long 150 mm x 150mm size at the top and 200mm x200 mm at the bottom  using 10 mm dia. MS rod 4 nos and strirrups 8mm dia MS rod @ 150mm  center to center . 12mm thick cement plaster (1:4) in/c NCF in all over the slab and post. Water connection to be taken from the nearest distribution line with supply of materials and labour as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Each,Each,9258.628237
+29.37,"12 mm dia House connection with Platform:  a) Construction of 1.00m x 1.00m size (outside) platform and 1meter long drain for  House connection as per drawing and design with 100 mm thick cement concrete (1: 2 :4) over  single brick flat soling .  RCC post (1:2: 4) of 1.40 m long 150 mm x 150mm size at the top and 200mm x200 mm at the bottom  using 10 mm dia. MS rod 4 nos and strirrups 8mm dia MS rod @ 150mm  center to center,  12mm thick cement plaster (1:4) in/c NCF in all over the slab and post.  b) Construction of 1.10m x 0.60m size water meter chamber as per drawing and design. c) Water connection with supply of materials & labour for a distance 25 meter from the nearest distribution line.  as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per item,Per item,10851.21234
+29.38,"12 mm dia House connection without Platform: Provide and making house connection in all respect which includes cutting of road, making trench for house connection from old/new water line by supplying required materials and restoration of road including a) Construction of 1.10m x 0.60m size water meter chamber as per drawing and design.  b) Water connection with supply of materials & labour for a distance 25 meter from the nearest distribution line.  as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per item,Per item,6313.345542
+29.39,"20 mm dia House connection with Platform: a) Construction of 1.00m x 1.00m size (outside) platform and 1meter long drain for  House connection as per drawing and design with 100 mm thick cement concrete (1: 2 :4) over  single brick flat soling .  RCC post (1:2: 4) of 1.40 m long 150 mm x 150mm size at the top and 200mm x200 mm at the bottom  using 10 mm dia. MS rod 4 nos and strirrups 8mm dia MS rod @ 150mm  center to center,  12mm thick cement plaster (1:4) in/c NCF in all over the slab and post.  b) Construction of 1.10m x 0.60m size water meter chamber as per drawing and design. c) Water connection with supply of materials & labour for a distance 25 meter from the nearest distribution line.  as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per item,Per item,10893.9963
+29.4,"20  mm dia House connection without Platform: a) Construction of 1.10m x 0.60m size water meter cahamber as per drawing and design. b) Water connection with supply of materials & labour for a distance 25 meter from the nearest distribution line.  as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).                   ",Per item,Per item,6893.729282
+29.42,"25  mm dia House connection without Platform:  a) Construction of 1.10m x 0.60m size water meter chamber as per drawing and design.  b) Water connection with supply of materials & labour for a distance 25 meter from the nearest distribution line.  as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).                   ",Per item,Per item,7307.237359
+29.43,"Supply, testing (one meter in one lot of supply) and installation of (Class C according to ISO Standard- 4064 and meter body made of good quality non-corrosive Brass) 1/2 inch (12 -15 mm) size water meter with all other fittings in all respect etc.,  as per drawing, specification and direction of Engineer- In-charge. Project Name including DPHE must be written in Dial Gauge of Meter and meters must be supplied with anti corrosive epoxy resin paint in blue color. Especially  1. ISO Certificate of the water meter manufaturer  2. Operation manual with product specification  3. Installation procedure drawing/manual 4. Factory Test report by any third party  must be submitted before supply of the meter. Local Laboratory test report of different parameters for water meters  must be submitted before installation and based on satisfactory test report conforming to ISO standard 4064. meters will be accepted for installation. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge, tests done by the contractor with VAT, Income Tax & Profit).          ",Each,Each,2576.756564
+29.44,"Supply, testing (one meter in one lot of supply) and installation of (Class C according to ISO Standard- 4064 and meter body made of good quality non-corrosive Brass)  3/4 inch (20 mm) size water meter with all other fittings in all respect etc.,  as per drawing, specification and direction of Engineer- In-charge. Project Name including DPHE must be written in Dial Gauge of Meter and meters must be supplied with anti corrosive epoxy resin paint in blue color. Especially  1. ISO Certificate of the water meter manufaturer  2. Operation manual with product specification  3. Installation procedure drawing/manual 4. Factory Test report done by any third party  must be submitted before supply of the meter. Local Laboratory test report of different parameters for water meters  must be submitted before installation and based on satisfactory test report conforming to ISO standard 4064. meters will be accepted for installation. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge, tests done by the contractor with VAT, Income Tax & Profit).               ",Each,Each,3190.270031
+29.45,"Supply, testing (one meter in one lot of supply) and installation of (Class C according to ISO Standard- 4064 and meter body made of good quality non-corrosive Brass)   1 inch (25 mm) size water meter with all other fittings in all respect etc.,  as per drawing, specification and direction of Engineer- In-charge. Project Name including DPHE must be written in Dial Gauge of Meter and meters must be supplied with anti corrosive epoxy resin paint in blue color. Especially  1. ISO Certificate of the water meter manufaturer  2. Operation manual with product specification  3. Installation procedure drawing/manual 4. Factory Test report by any third party must be submitted before supply of the meter. Local Laboratory test report of different parameters for water meters  must be submitted before installation and based on satisfactory test report conforming to ISO standard 4064. meters will be accepted for installation. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge, tests done by the contractor with VAT, Income Tax & Profit).          ",Each,Each,3803.783499
+29.45.01,"Supply, testing (one meter in one lot of supply) and installation of (Class C according to ISO Standard- 4064 and meter body made of good quality non-corrosive Brass) 1.5 inch (38 mm) size water meter with all other fittings in all respect etc.,  as per drawing, specification and direction of Engineer- In-charge. Project Name including DPHE must be written in Dial Gauge of Meter and meters must be supplied with anti corrosive epoxy resin paint in blue color. Especially  1. ISO Certificate of the water meter manufaturer  2. Operation manual with product specification  3. Installation procedure drawing/manual 4. Factory Test report by any third party must be submitted before supply of the meter. Local Laboratory test report of different parameters for water meters  must be submitted before installation and based on satisfactory test report conforming to ISO standard 4064. meters will be accepted for installation. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge, tests done by the contractor with VAT, Income Tax & Profit).          ",Each,Each,4478.648313
+29.45.02,"Supply, testing (one meter in one lot of supply) and installation of (Class C according to ISO Standard- 4064 and meter body made of good quality non-corrosive Brass)   2 inch (50 mm) size water meter with all other fittings in all respect etc.,  as per drawing, specification and direction of Engineer- In-charge. Project Name including DPHE must be written in Dial Gauge of Meter and meters must be supplied with anti corrosive epoxy resin paint in blue color. Especially  1. ISO Certificate of the manufaturer  2. Operation manual with product specification  3. Installation procedure drawing/manual 4. Factory Test report by any third party must be submitted before supply of the meter. Local Laboratory test report of different parameters for water meters  must be submitted before installation and based on satisfactory test report conforming to ISO standard 4064. meters will be accepted for installation. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge, tests done by the contractor with VAT, Income Tax & Profit).        ",Each,Each,5214.864474
+29.46.01,12 mm dia. Pressure valve.,Each,Each,2722.036553
+29.46.02,32 mm dia. Pressure valve.,Each,Each,3580.955407
+29.47,"Supply and installing 25mm dia manual air release valve made of Italy/ France/Taiwan in/c 3mm thick MS steel protection box (Size 250mm x250mm x300mm, made of 10mm MS bar 75mm c/c) and fixing the box with GI/ MS pipe by  welding, nipple  and 19mm gate valve, padlock also be supplied with other necessary fittings as per istruction in any diameter pipe line ( at bridge crossing and higher elevation)  as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Each,Each,2208.648483
+29.48.01,100 mm dia. Non Return Valve,Each,Each,9267.120927
+29.48.02,150 mm dia. Non Return Valve,Each,Each,11951.24235
+29.49.01,100 mm dia. Loose flange.,Each,Each,520.2594204
+29.49.02,150 mm dia. Loose flange.,Each,Each,642.9621139
+29.49.03,200 mm dia. Loose flange.,Each,Each,856.4648006
+29.49.04,250 mm dia. Loose flange.,Each,Each,1063.832353
+29.49.05,300 mm dia. Loose flange.,Each,Each,1392.675571
+29.49.06,400 mm dia. Loose flange.,Each,Each,2199.445781
+29.5,"Restoration of  single layer brick flat soling road after installation of water supply pipe line 0.4m plus pipe dia width with supply of materials in/c.  using 50% salvaging materials. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Sqm,Per Sqm,447.4102178
+29.51,"Restoration of  HBB road over a single layer brick flat soling road after installation of water supply pipe line 0.4m plus pipe dia width with supply of materials in/c.  using 50% salvaging materials. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Sqm,Per Sqm,636.0453631
+29.52.01,"38 mm thick compacted pre-mixed bituminous carpeting with 20 mm down graded stone-chips (having LAA value <= 30%, water absorption not greater than 2%, flakiness index not greater than 35) of gradation as specified @ 0.63 cum of stonechips mixed with 37 kg heated bitumen of 60/70 penetration grade heated straight run bitumen satisfying the requirements of ASTM/AASHTO. Bitumen content % by wt. of total is 4.5% to 5.50% or as determined by job mix design. The bitumen and stone-chips shall be separately heated to a temperature of 140°C – 155°C and 150°C – 170°C respectively before mixing. The mixing shall be done at temperature between 140°C – 160°C at a separate place away from the fire. The bitumen and stone-chips mixture shall be laid uniformly over ",Per Sqm,Per Sqm,748.4850375
+29.52.02,"25 mm thick compacted pre-mixed bituminous carpeting with 12 mm down graded stone-chips (having LAA value <= 30%, water absorption not greater than 2%, flakiness index not greater than 35) of gradation as specified @ 0.34 cum of stone chips mixed with 23 kg heated bitumen of 60/70 penetration grade heated straight run bitumen satisfying the requirements of  ASTM/AASHTO. Bitumen content % by wt. of total is 4.5% to 5.50% or as determined by job mix design. The bitumen and stone-chips shall be separately heated to a temperature of 140°C – 155°C and 150°C – 170°C respectively before mixing. The mixing shall be done at temperature between 140°C – 160°C at a separate place away from the fire. The bitumen and stone-chips mixture shall be laid uniformly over ",Per Sqm,Per Sqm,475.0440128
+29.52.03,"Providing tack coat @ 7.50 kg of bitumen (60/70 penetration grade) per 10 sqm including heating bitumen up to 175°C to 185°C etc. all complete (cost of bitumen included) and accepted by the Engineer-in-charge.  (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Sqm,Per Sqm,80.43151743
+29.52.04,"Providing seal coat with 4 cft of Sylhet sand (FM 2.2) mixed with @ 7.32 kg of bitumen (60/70 penetration grade) per 10 sqm of road surface including supplying and spreading of dry sand (F.M. 0.80) @ 0.09 cum per 10 sqm, including heating bitumen upto 176°C to 190°C, and spreading, rolling at a temperature not below 90°C celsius with appropriate steel drum roller (3 -5 ton) and pneumatic multiple tire roller (8-10 tons) to the desired compaction etc. all complete (cost of bitumen included ) and accepted by the Engineer-incharge.  (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Sqm,Per Sqm,124.2125629
+29.52.05,"Premixed bituminous seal coat with 0.12 cum of pea gravels mixed with 80 kg of bitumen (60/70 penetration grade) per cum of pea gravels and laid over 10 sqm road surface, spreading with proper camber, grade, surface blinding with dry sand (F.M. 1.2) @ 0.09 cum per 10 sqm, rolling at a temperature not below 90°C with appropriate steel drum roller (3-5 ton) and pneumatic multiple tire roller (8-10 tons) to the desired compaction etc. all complete and accepted by the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Sqm,Per Sqm,177.3934809
+29.52.06,"Providing prime coat @ 1.2 liter/sqm with cutback bitumen to be prepared by cutting back 60/70 penetration grade bitumen in the ratio of 100 parts by volume of bitumen to 40-60 parts by volume of kerosene depending on the porosity of surface and will be decided by field trials, carefully cleaning of the surface of base material to be primed and spraying cutback bitumen at a temperature from 100 degree celcius to 120 degree celcius by appropriate hand device etc.all complete as per direction of the Engineer-in-charge.(This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Sqm,Per Sqm,109.7087482
+29.53,"Restoration of  road after installation of water supply pipe line 0.4m plus pipe dia width by Cement Concrete (1:2:4) with supply of cement, stone chips, 20 mm well down graded & sand (F.M-2.2) in/c. curing etc. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Cum,Per Cum,9225.643981
+29.54,"Restoration of  road after installation of water supply pipe line 0.4m plus pipe dia width by Cement Concrete (1:2:4) with supply of cement, brick chips, 20 mm well down graded & sand (F.M-2.2) in/c. curing etc. as per drawing, design, specification  and direction of the Engineer-in-charge. (This item includes Labour charge, carrying charge with VAT, Income Tax & Profit).          ",Per Cum,Per Cum,7282.291286
+29.55.01,110 mm dia pipe line.,Per rm,Per rm,4.478648313
+29.55.02,160 mm dia pipe line.,Per rm,Per rm,5.779296864
+29.55.03,200 mm dia pipe line.,Per rm,Per rm,7.693458882
+29.55.04,225 mm dia pipe line.,Per rm,Per rm,9.239512821
+29.55.05,250 mm dia pipe line.,Per rm,Per rm,10.71808028
+29.55.06,280 mm dia pipe line.,Per rm,Per rm,12.6322423
+29.55.07,315 mm dia pipe line.,Per rm,Per rm,14.23964758
+29.55.08,355 mm dia pipe line.,Per rm,Per rm,15.60778261
+29.56.01,110mm dia pipe line.,Per rm,Per rm,4.932648279
+29.56.02,160 mm dia pipe line.,Per rm,Per rm,6.043107655
+29.56.03,200 mm dia pipe line.,Per rm,Per rm,6.846810297
+29.56.04,225 mm dia pipe line.,Per rm,Per rm,7.852972384
+29.56.05,250 mm dia pipe line.,Per rm,Per rm,9.466512804
+29.56.06,280 mm dia pipe line.,Per rm,Per rm,11.23956672
+29.56.07,315 mm dia pipe line.,Per rm,Per rm,13.26416117
+29.56.08,355 mm dia pipe line.,Per rm,Per rm,15.11697184
+29.57.01,110 mm dia. gate valve.,Each,Each,8724.161508
+29.57.02,160 mm dia. gate valve.,Each,Each,13690.55303
+29.57.03,200 mm dia. gate valve. ,Each,Each,19540.40394
+29.57.04,225 mm dia. gate valve. ,Each,Each,23123.32259
+29.57.05,250 mm dia. gate valve. ,Each,Each,26804.4034
+29.57.06,280 mm dia. gate valve. ,Each,Each,27417.91686
+29.57.07,315 mm dia. gate valve. ,Each,Each,29258.45727
+29.57.08,355 mm dia. gate valve.,Each,Each,30485.4842
+29.58.01,100 mm (ND) dia. Wash out.,Each,Each,4362.080754
+29.58.02,150 mm (ND) dia. Wash out.,Each,Each,6448.026543
+29.58.03,200 mm (ND) dia. Wash out.,Each,Each,7797.756172

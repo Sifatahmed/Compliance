@@ -1,0 +1,240 @@
+
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block extrahead %}{{ block.super }}
+<script src="{% url 'admin:jsi18n' %}"></script>
+{{ media }}
+{% endblock %}
+
+
+
+
+{% block content %}
+
+  
+<div class="name">
+  <form method="GET">
+  <div class="name_field">
+
+  <span>Name: </span>
+  <input name="name__icontains" type="text" id="name" value="{{request.GET.name__icontains}}">
+  </div>
+
+<div class="dir_id">
+    <span>ID: </span>
+    <input name="id" type="text" id="dir_id" value="{{request.GET.id}}">
+
+</div>
+
+  <button type="submit" id="Search">Search</button>
+
+  
+  <a id="clear" href="/admin/new/directive/status/list?">Clear</a>
+</form>
+  </div>
+<div class="newdirective">
+
+  <a href="/admin/compliance_digitalization_app/newdirectivecirculation/add/">New Directive Circulation</a>
+
+</div>
+ 
+<style>
+
+  a#clear {
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: #eee;
+    width: 100px;
+    border: 2px solid #000;
+    margin-top: 18px;
+    height: 28px;
+    color: #000;
+}
+  .name {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    background-color: #ccc;
+}
+
+button#Search {
+    display: block;
+    width: 100px;
+    height: 34px;
+    margin: auto;
+}
+
+.name_field input {
+    width: 28%;
+    margin-left: 8%;
+    margin-top: 10px;
+}
+
+.name_field span {
+    width: 63%;
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    height: 50%;
+    text-align: right;
+    font-size: 19px;
+}
+
+.name_field {
+    width: 80%;
+    margin: auto;
+    height: 60%;
+}
+
+.dir_id span{
+    width: 27%;
+    height: 50%;
+    text-align: right;
+    font-size: 19px;
+}
+.dir_id input{
+    width: 28%;
+    margin-left: 3%;
+    margin-bottom: 1%;
+}
+.dir_id{
+    width: 80%;
+    float: left;
+    margin-top: -33px;
+    margin-left: 168px;
+    height: 60%;
+}
+
+
+.newdirective{
+    background-color: #ccc;
+    
+    height: 32px;
+    margin: 1%;
+    margin-left: 80%;
+    padding: 5px
+}
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h2 {
+    margin: auto;
+    font-size: 24px;
+    text-align: center;
+}
+</style>
+
+
+
+<h2>NEW DIRECTIVE IMPLEMENTATION STATUS</h2>
+
+
+
+
+
+
+
+
+
+<table style="margin-top: 3%;">
+  <tr>
+    <th>Directive Id</th>
+    <th>Directive Name</th>
+    <th>Responsible Division</th>
+    <th>Assigned Person</th>
+    <th>Deadline</th>
+    <th>Completion Date</th>
+  </tr>
+  {% for i, p, d, im_date, user in obj %}
+  <tr>
+
+  	
+    <td><a href="/admin/new/directive/{{i.id}}/status/">{{i.id}}</a></td>
+    <td><a href="/admin/compliance_digitalization_app/newdirectivecirculation/{{i.id}}/change/">{{i.directive_name}}</a></td>
+    <td>
+      {% for n in p %}
+
+      
+      {% for j in n %}
+        {{j}},
+      {% endfor %}
+      {% endfor %}
+
+
+    </td>
+    <td>
+      
+      {% for n in user %}
+
+      
+      {% for j in n %}
+        {{j}},
+      {% endfor %}
+      {% endfor %}
+
+    </td>
+    <td>
+      {% for deadline_date in d %}
+        {{deadline_date|date:"d-m-Y"}}
+      {% endfor %}
+
+
+    </td>
+    <td>
+      {% for implement_date in im_date %}
+        {{implement_date|date:"d-m-Y"}}
+      {% endfor %}
+    </td>
+    {% endfor %}
+  </tr>
+
+
+</table>
+
+
+{% for k in page_obj %}
+
+    {{ k.full_name|upper }}<br>
+
+{% endfor %}
+
+<div class="pagination">
+  <span class="step-links">
+      {% if page_obj.has_previous %}
+          <a href="?page=1">&laquo; first</a>
+          <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+      {% endif %}
+
+      <span class="current">
+          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+      </span>
+
+      {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}">next</a>
+          <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+      {% endif %}
+  </span>
+</div>
+
+
+{% endblock %}
+
+
